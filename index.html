@@ -2,170 +2,319 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desafío Bíblico Galáctico</title>
-  <style>
-    * { box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Desafío Bíblico Galáctico</title>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      color: white;
-      background:
-        radial-gradient(circle at 15% 20%, #34206d, transparent 35%),
-        radial-gradient(circle at 85% 70%, #123d63, transparent 35%),
-        #08091c;
-      text-align: center;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    header {
-      padding: 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ffffff25;
-    }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  background:
+    radial-gradient(circle at 12% 15%, #39216e, transparent 34%),
+    radial-gradient(circle at 88% 65%, #123d63, transparent 35%),
+    #08091c;
+}
 
-    .logo {
-      color: #65eaff;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
+header {
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff28;
+}
 
-    .status {
-      color: #b8c4e9;
-      font-size: 12px;
-    }
+.logo {
+  color: #65eaff;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
 
-    main {
-      width: min(900px, 90%);
-      margin: auto;
-      padding: 65px 0;
-    }
+.status {
+  color: #bdc8ed;
+  font-size: 12px;
+}
 
-    .eyebrow {
-      color: #ff77d5;
-      letter-spacing: 4px;
-      font-size: 12px;
-      font-weight: bold;
-    }
+main {
+  width: min(1000px, 92%);
+  margin: auto;
+  padding: 48px 0;
+}
 
-    h1 {
-      font-size: clamp(38px, 8vw, 75px);
-      margin: 20px 0;
-      background: linear-gradient(90deg, #fff, #69eaff, #bd91ff);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+.eyebrow {
+  color: #ff82d9;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
 
-    .description {
-      color: #b8c4e9;
-      line-height: 1.7;
-      max-width: 580px;
-      margin: auto;
-    }
+h1 {
+  font-size: clamp(38px, 7vw, 68px);
+  line-height: .98;
+  margin: 16px 0;
+  background: linear-gradient(90deg, #fff, #69eaff, #bd91ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-    .card {
-      margin: 40px auto;
-      padding: 30px;
-      max-width: 650px;
-      border: 1px solid #8d8bff55;
-      border-radius: 22px;
-      background: #171a36dd;
-      box-shadow: 0 0 35px #7755ff20;
-    }
+.lead {
+  color: #c0c9ec;
+  line-height: 1.6;
+  max-width: 620px;
+  margin: 0 auto;
+}
 
-    .characters {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin: 25px 0;
-    }
+.panel {
+  margin: 30px auto;
+  padding: 25px;
+  border: 1px solid #8d8bff66;
+  border-radius: 22px;
+  background: #111630ef;
+  box-shadow: 0 0 40px #7755ff26;
+}
 
-    .character {
-      padding: 15px 5px;
-      border: 1px solid #ffffff30;
-      border-radius: 14px;
-      background: #ffffff0b;
-    }
+h2 {
+  margin: 0 0 8px;
+}
 
-    .character span {
-      display: block;
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
 
-    .character small {
-      color: #cbd2f5;
-    }
+.hero {
+  padding: 7px 7px 12px;
+  border: 2px solid #6075ba66;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #162b50, #11152d);
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  transition: .2s;
+}
 
-    button {
-      border: 0;
-      padding: 15px 25px;
-      border-radius: 12px;
-      background: linear-gradient(90deg, #59eaff, #b58aff);
-      color: #090b20;
-      font-size: 15px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.hero:hover {
+  transform: translateY(-4px);
+  border-color: #65eaff;
+}
 
-    footer {
-      color: #8e9abd;
-      padding: 25px;
-      font-size: 12px;
-    }
+.hero.selected {
+  border-color: #65eaff;
+  box-shadow: 0 0 22px #55e8ff8c;
+  background: linear-gradient(145deg, #174d69, #24204e);
+}
 
-    @media(max-width: 550px) {
-      .characters { grid-template-columns: repeat(2, 1fr); }
-      header { gap: 10px; }
-    }
-  </style>
+/* Muestra el retrato completo, sin cortarlo */
+.hero img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #20264b, #10162f);
+  padding: 4px;
+}
+
+.hero strong {
+  display: block;
+  padding-top: 9px;
+  font-size: 15px;
+}
+
+.hero small {
+  display: block;
+  color: #c5d0f4;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.message {
+  min-height: 22px;
+  color: #65eaff;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+.start {
+  border: 0;
+  border-radius: 13px;
+  padding: 15px 25px;
+  background: linear-gradient(90deg, #59eaff, #b58aff);
+  color: #090b20;
+  font-weight: 900;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+footer {
+  padding: 22px;
+  color: #98a5ca;
+  font-size: 12px;
+}
+
+@media(max-width: 650px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero img {
+    height: 170px;
+  }
+
+  main {
+    padding: 32px 0;
+  }
+
+  .panel {
+    padding: 17px;
+  }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="logo">✦ DESAFÍO BÍBLICO</div>
-    <div class="status">UNIVERSO GALÁCTICO</div>
-  </header>
 
-  <main>
-    <div class="eyebrow">UNA AVENTURA DE FE Y CONOCIMIENTO</div>
+<header>
+  <div class="logo">✦ DESAFÍO BÍBLICO</div>
+  <div class="status">UNIVERSO GALÁCTICO</div>
+</header>
 
-    <h1>DESAFÍO<br>BÍBLICO</h1>
+<main>
 
-    <p class="description">
-      Explora las historias de la Biblia, elige tu personaje
-      y prepárate para demostrar cuánto sabes.
-      ¡Tu aventura comienza aquí!
+  <div class="eyebrow">
+    UNA AVENTURA DE FE Y CONOCIMIENTO
+  </div>
+
+  <h1>DESAFÍO<br>BÍBLICO GALÁCTICO</h1>
+
+  <p class="lead">
+    Personajes que hicieron historia con Dios.
+    Elige tu héroe y prepárate para una aventura
+    de conocimiento bíblico.
+  </p>
+
+  <section class="panel">
+
+    <h2>✧ ELIGE TU HÉROE ✧</h2>
+
+    <p class="lead">
+      Selecciona un retrato para elegir tu personaje.
     </p>
 
-    <section class="card">
-      <h2>✧ ELIGE TU HÉROE ✧</h2>
-      <p class="description">Personajes que marcaron la historia bíblica.</p>
+    <div class="grid" id="heroes">
 
-      <div class="characters">
-        <div class="character"><span>👑</span><small>David</small></div>
-        <div class="character"><span>⚡</span><small>Moisés</small></div>
-        <div class="character"><span>✨</span><small>Ester</small></div>
-        <div class="character"><span>🔥</span><small>Elías</small></div>
-        <div class="character"><span>🌟</span><small>María</small></div>
-        <div class="character"><span>🛸</span><small>Pablo</small></div>
-        <div class="character"><span>🦁</span><small>Daniel</small></div>
-        <div class="character"><span>🛡️</span><small>Débora</small></div>
-      </div>
-
-      <button onclick="alert('¡Próximamente comienza tu aventura bíblica!')">
-        ¡COMENZAR A JUGAR! 🚀
+      <button class="hero selected" type="button" data-name="David">
+        <img src="david.jpg" alt="Retrato de David">
+        <strong>David</strong>
+        <small>Pastor y rey</small>
       </button>
-    </section>
-  </main>
 
-  <footer>
-    DESAFÍO BÍBLICO · Aprende, juega y comparte.
-  </footer>
+      <button class="hero" type="button" data-name="Moisés">
+        <img src="moises.jpg" alt="Retrato de Moisés">
+        <strong>Moisés</strong>
+        <small>Líder de Israel</small>
+      </button>
+
+      <button class="hero" type="button" data-name="Ester">
+        <img src="ester.jpg" alt="Retrato de Ester">
+        <strong>Ester</strong>
+        <small>Reina valiente</small>
+      </button>
+
+      <button class="hero" type="button" data-name="Elías">
+        <img src="elias.jpg" alt="Retrato de Elías">
+        <strong>Elías</strong>
+        <small>Profeta</small>
+      </button>
+
+      <button class="hero" type="button" data-name="María">
+        <img src="maria.jpg" alt="Retrato de María">
+        <strong>María</strong>
+        <small>Madre de Jesús</small>
+      </button>
+
+      <button class="hero" type="button" data-name="Pablo">
+        <img src="pablo.jpg" alt="Retrato de Pablo">
+        <strong>Pablo</strong>
+        <small>Apóstol</small>
+      </button>
+
+      <button class="hero" type="button" data-name="Daniel">
+        <img src="daniel.jpg" alt="Retrato de Daniel">
+        <strong>Daniel</strong>
+        <small>Fiel y valiente</small>
+      </button>
+
+      <button class="hero" type="button" data-name="Débora">
+        <img src="debora.jpg" alt="Retrato de Débora">
+        <strong>Débora</strong>
+        <small>Jueza de Israel</small>
+      </button>
+
+    </div>
+
+    <div class="message" id="chosen" aria-live="polite">
+      Héroe seleccionado: David
+    </div>
+
+    <button class="start" id="start" type="button">
+      ¡COMENZAR A JUGAR! 🚀
+    </button>
+
+    <div class="message" id="notice" aria-live="polite"></div>
+
+  </section>
+
+</main>
+
+<footer>
+  DESAFÍO BÍBLICO GALÁCTICO · Aprende · Juega · Comparte
+</footer>
+
+<script>
+let selected = "David";
+
+const cards = [
+  ...document.querySelectorAll(".hero")
+];
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+
+    cards.forEach(c => {
+      c.classList.remove("selected");
+    });
+
+    card.classList.add("selected");
+
+    selected = card.dataset.name;
+
+    document.getElementById("chosen").textContent =
+      "Héroe seleccionado: " + selected;
+
+    document.getElementById("notice").textContent = "";
+  });
+});
+
+document.getElementById("start").addEventListener("click", () => {
+
+  document.getElementById("notice").textContent =
+    "¡" + selected + " está listo para la aventura! Pronto abriremos la primera misión.";
+
+});
+</script>
+
 </body>
 </html>
+
