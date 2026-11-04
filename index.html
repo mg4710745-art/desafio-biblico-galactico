@@ -349,7 +349,7 @@ cards.forEach(card => {
     alert("¡El clic funciona!");
     cards.forEach(c => c.classList.remove("selected"));
     card.classList.add("selected");
-
+console.log("Personaje seleccionado:", selected);
     selected = card.dataset.name;
 
     document.getElementById("chosen").textContent =
