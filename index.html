@@ -347,7 +347,6 @@ document.getElementById("start").addEventListener("click", () => {
   });
 });
 
-document.getElementById("mission").addEventListener("click", () => {
   const nickname = document.getElementById("nickname").value.trim();
   const category = document.getElementById("category").value;
   const difficulty = document.getElementById("difficulty").value;
@@ -363,6 +362,196 @@ document.getElementById("mission").addEventListener("click", () => {
     "Héroe: " + selected + ". " +
     "Categoría: " + category + ". " +
     "Dificultad: " + difficulty + ".";
+});
+const questions = [
+  {
+    level: "Fácil",
+    question: "¿Quién construyó el arca?",
+    answers: ["Moisés", "Noé", "David", "Pablo"],
+    correct: 1,
+    explanation: "Noé construyó el arca siguiendo las instrucciones de Dios."
+  },
+  {
+    level: "Fácil",
+    question: "¿Quién venció a Goliat?",
+    answers: ["David", "Saúl", "Salomón", "Pedro"],
+    correct: 0,
+    explanation: "David venció a Goliat confiando en Dios."
+  },
+  {
+    level: "Fácil",
+    question: "¿Dónde nació Jesús?",
+    answers: ["Nazaret", "Jerusalén", "Belén", "Egipto"],
+    correct: 2,
+    explanation: "Jesús nació en Belén."
+  },
+  {
+    level: "Intermedio",
+    question: "¿Quién interpretó los sueños del faraón?",
+    answers: ["Daniel", "José", "Aarón", "Samuel"],
+    correct: 1,
+    explanation: "José interpretó los sueños del faraón en Egipto."
+  },
+  {
+    level: "Intermedio",
+    question: "¿Qué reina arriesgó su vida para ayudar a su pueblo?",
+    answers: ["Rut", "María", "Ester", "Débora"],
+    correct: 2,
+    explanation: "Ester intercedió por su pueblo ante el rey."
+  },
+  {
+    level: "Intermedio",
+    question: "¿Quién fue tragado por un gran pez?",
+    answers: ["Jonás", "Elías", "Isaías", "Pedro"],
+    correct: 0,
+    explanation: "Jonás estuvo dentro de un gran pez."
+  },
+  {
+    level: "Difícil",
+    question: "¿Quién fue el primer rey de Israel?",
+    answers: ["David", "Salomón", "Saúl", "Josías"],
+    correct: 2,
+    explanation: "Saúl fue el primer rey de Israel."
+  },
+  {
+    level: "Difícil",
+    question: "¿En qué isla recibió Juan la revelación del Apocalipsis?",
+    answers: ["Creta", "Patmos", "Chipre", "Malta"],
+    correct: 1,
+    explanation: "Juan recibió la revelación en la isla de Patmos."
+  },
+  {
+    level: "Difícil",
+    question: "¿Quién sucedió a Moisés como líder de Israel?",
+    answers: ["Caleb", "Aarón", "Josué", "Gedeón"],
+    correct: 2,
+    explanation: "Josué sucedió a Moisés."
+  },
+  {
+    level: "Difícil",
+    question: "¿Quién era la madre de Samuel?",
+    answers: ["Ana", "Sara", "Rebeca", "Raquel"],
+    correct: 0,
+    explanation: "Ana fue la madre de Samuel."
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+let seconds = 20;
+let timerInterval;
+
+function startGame() {
+  const level = document.getElementById("difficulty").value;
+  const selectedQuestions = questions.filter(q => q.level === level);
+
+  if (selectedQuestions.length === 0) return;
+
+  window.gameQuestions = selectedQuestions;
+  currentQuestion = 0;
+  score = 0;
+
+  document.getElementById("setup").hidden = true;
+  document.getElementById("game").hidden = false;
+
+  showQuestion();
+}
+
+function showQuestion() {
+  clearInterval(timerInterval);
+
+  const q = window.gameQuestions[currentQuestion];
+  seconds = 20;
+
+  document.getElementById("questionNumber").textContent =
+    "Pregunta " + (currentQuestion + 1) + " de " + window.gameQuestions.length;
+
+  document.getElementById("questionText").textContent = q.question;
+  document.getElementById("score").textContent = "⭐ Puntos: " + score;
+  document.getElementById("feedback").textContent = "";
+
+  const answers = document.getElementById("answers");
+  answers.innerHTML = "";
+
+  q.answers.forEach((answer, index) => {
+    const button = document.createElement("button");
+    button.textContent = answer;
+    button.className = "start";
+    button.style.display = "block";
+    button.style.width = "100%";
+    button.style.margin = "10px 0";
+    button.onclick = () => checkAnswer(index);
+    answers.appendChild(button);
+  });
+
+  updateTimer();
+
+  timerInterval = setInterval(() => {
+    seconds--;
+    updateTimer();
+
+    if (seconds <= 0) {
+      clearInterval(timerInterval);
+      checkAnswer(-1);
+    }
+  }, 1000);
+}
+
+function updateTimer() {
+  document.getElementById("timer").textContent =
+    "⏱️ " + seconds + " segundos";
+}
+
+function checkAnswer(index) {
+  clearInterval(timerInterval);
+
+  const q = window.gameQuestions[currentQuestion];
+  const buttons = document.querySelectorAll("#answers button");
+
+  buttons.forEach(button => button.disabled = true);
+
+  if (index === q.correct) {
+    score += seconds * 10;
+    document.getElementById("feedback").textContent =
+      "✨ ¡CORRECTO! + " + (seconds * 10) + " puntos. " + q.explanation;
+  } else {
+    document.getElementById("feedback").textContent =
+      "💫 " + (index === -1 ? "¡Se acabó el tiempo!" : "¡Inténtalo en la próxima!") +
+      " La respuesta correcta era: " + q.answers[q.correct] +
+      ". " + q.explanation;
+  }
+
+  document.getElementById("score").textContent = "⭐ Puntos: " + score;
+
+  setTimeout(() => {
+    currentQuestion++;
+
+    if (currentQuestion < window.gameQuestions.length) {
+      showQuestion();
+    } else {
+      finishGame();
+    }
+  }, 3500);
+}
+
+function finishGame() {
+  document.getElementById("game").innerHTML =
+    "<h2>🏆 ¡MISIÓN COMPLETADA!</h2>" +
+    "<p>Tu puntuación final:</p>" +
+    "<h1>" + score + " puntos</h1>" +
+    "<button class='start' onclick='location.reload()'>VOLVER A JUGAR</button>";
+}
+
+document.getElementById("mission").addEventListener("click", () => {
+  const nickname = document.getElementById("nickname").value.trim();
+
+  if (!nickname) {
+    document.getElementById("setupNotice").textContent =
+      "Escribe tu apodo para continuar.";
+    return;
+  }
+
+  startGame();
 });
 </script>
 
@@ -401,5 +590,18 @@ document.getElementById("mission").addEventListener("click", () => {
   </button>
 
   <p id="setupNotice" class="message"></p>
+</div>
+<div id="game" hidden>
+  <h2>🌌 DESAFÍO BÍBLICO</h2>
+
+  <p id="questionNumber">Pregunta 1 de 10</p>
+  <h3 id="questionText">Aquí aparecerá la pregunta</h3>
+
+  <div id="answers"></div>
+
+  <p id="timer">⏱️ 20 segundos</p>
+  <p id="score">⭐ Puntos: 0</p>
+
+  <p id="feedback" class="message"></p>
 </div>
 </section>
