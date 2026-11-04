@@ -145,7 +145,37 @@ h2 {
   font-size: 14px;
   margin: 12px 0;
 }
+#setup {
+  margin-top: 25px;
+  padding: 25px;
+  border: 1px solid #65eaff;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #17234a, #11152d);
+  box-shadow: 0 0 25px #65eaff33;
+}
 
+#setup label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #65eaff;
+  font-weight: bold;
+}
+
+#setup input,
+#setup select {
+  width: 100%;
+  max-width: 400px;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #65eaff;
+  background: #080d24;
+  color: white;
+  font-size: 16px;
+}
+
+#setup h3 {
+  color: #ff82d9;
+}
 .start {
   border: 0;
   border-radius: 13px;
@@ -308,13 +338,68 @@ cards.forEach(card => {
 });
 
 document.getElementById("start").addEventListener("click", () => {
-
+  document.getElementById("setup").hidden = false;
+  document.getElementById("heroName").textContent = selected;
   document.getElementById("notice").textContent =
-    "¡" + selected + " está listo para la aventura! Pronto abriremos la primera misión.";
+    "¡" + selected + " ha sido elegido!";
+  document.getElementById("setup").scrollIntoView({
+    behavior: "smooth"
+  });
+});
 
+document.getElementById("mission").addEventListener("click", () => {
+  const nickname = document.getElementById("nickname").value.trim();
+  const category = document.getElementById("category").value;
+  const difficulty = document.getElementById("difficulty").value;
+  const notice = document.getElementById("setupNotice");
+
+  if (nickname === "") {
+    notice.textContent = "¡Escribe tu apodo para continuar!";
+    return;
+  }
+
+  notice.textContent =
+    "¡Misión preparada, " + nickname + "! " +
+    "Héroe: " + selected + ". " +
+    "Categoría: " + category + ". " +
+    "Dificultad: " + difficulty + ".";
 });
 </script>
 
 </body>
 </html>
 
+<div class="message" id="notice" aria-live="polite"></div>
+<div id="setup" hidden>
+  <h2>✦ PREPARA TU MISIÓN ✦</h2>
+
+  <p>Tu héroe elegido:</p>
+  <h3 id="heroName"></h3>
+
+  <label for="nickname">Escribe tu apodo:</label>
+  <input id="nickname" type="text" maxlength="18"
+         placeholder="Tu nombre de jugador">
+
+  <label for="category">Elige una categoría:</label>
+  <select id="category">
+    <option>Conocimiento general</option>
+    <option>Personajes bíblicos</option>
+    <option>Antiguo Testamento</option>
+    <option>Nuevo Testamento</option>
+    <option>La vida de Jesús</option>
+  </select>
+
+  <label for="difficulty">Elige la dificultad:</label>
+  <select id="difficulty">
+    <option>Fácil</option>
+    <option>Intermedio</option>
+    <option>Difícil</option>
+  </select>
+
+  <button class="start" id="mission" type="button">
+    ¡CONFIRMAR MI MISIÓN! 🚀
+  </button>
+
+  <p id="setupNotice" class="message"></p>
+</div>
+</section>
