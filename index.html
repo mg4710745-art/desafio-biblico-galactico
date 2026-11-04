@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafío Bíblico Galáctico</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+      background:
+        radial-gradient(circle at 15% 20%, #34206d, transparent 35%),
+        radial-gradient(circle at 85% 70%, #123d63, transparent 35%),
+        #08091c;
+      text-align: center;
+    }
+
+    header {
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ffffff25;
+    }
+
+    .logo {
+      color: #65eaff;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .status {
+      color: #b8c4e9;
+      font-size: 12px;
+    }
+
+    main {
+      width: min(900px, 90%);
+      margin: auto;
+      padding: 65px 0;
+    }
+
+    .eyebrow {
+      color: #ff77d5;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(38px, 8vw, 75px);
+      margin: 20px 0;
+      background: linear-gradient(90deg, #fff, #69eaff, #bd91ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .description {
+      color: #b8c4e9;
+      line-height: 1.7;
+      max-width: 580px;
+      margin: auto;
+    }
+
+    .card {
+      margin: 40px auto;
+      padding: 30px;
+      max-width: 650px;
+      border: 1px solid #8d8bff55;
+      border-radius: 22px;
+      background: #171a36dd;
+      box-shadow: 0 0 35px #7755ff20;
+    }
+
+    .characters {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .character {
+      padding: 15px 5px;
+      border: 1px solid #ffffff30;
+      border-radius: 14px;
+      background: #ffffff0b;
+    }
+
+    .character span {
+      display: block;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .character small {
+      color: #cbd2f5;
+    }
+
+    button {
+      border: 0;
+      padding: 15px 25px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #59eaff, #b58aff);
+      color: #090b20;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      color: #8e9abd;
+      padding: 25px;
+      font-size: 12px;
+    }
+
+    @media(max-width: 550px) {
+      .characters { grid-template-columns: repeat(2, 1fr); }
+      header { gap: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">✦ DESAFÍO BÍBLICO</div>
+    <div class="status">UNIVERSO GALÁCTICO</div>
+  </header>
+
+  <main>
+    <div class="eyebrow">UNA AVENTURA DE FE Y CONOCIMIENTO</div>
+
+    <h1>DESAFÍO<br>BÍBLICO</h1>
+
+    <p class="description">
+      Explora las historias de la Biblia, elige tu personaje
+      y prepárate para demostrar cuánto sabes.
+      ¡Tu aventura comienza aquí!
+    </p>
+
+    <section class="card">
+      <h2>✧ ELIGE TU HÉROE ✧</h2>
+      <p class="description">Personajes que marcaron la historia bíblica.</p>
+
+      <div class="characters">
+        <div class="character"><span>👑</span><small>David</small></div>
+        <div class="character"><span>⚡</span><small>Moisés</small></div>
+        <div class="character"><span>✨</span><small>Ester</small></div>
+        <div class="character"><span>🔥</span><small>Elías</small></div>
+        <div class="character"><span>🌟</span><small>María</small></div>
+        <div class="character"><span>🛸</span><small>Pablo</small></div>
+        <div class="character"><span>🦁</span><small>Daniel</small></div>
+        <div class="character"><span>🛡️</span><small>Débora</small></div>
+      </div>
+
+      <button onclick="alert('¡Próximamente comienza tu aventura bíblica!')">
+        ¡COMENZAR A JUGAR! 🚀
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    DESAFÍO BÍBLICO · Aprende, juega y comparte.
+  </footer>
+</body>
+</html>
