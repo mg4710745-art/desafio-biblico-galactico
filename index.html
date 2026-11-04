@@ -370,212 +370,2025 @@ document.getElementById("start").addEventListener("click", () => {
   });
 });
 
-const questions = [
-
-/* PERSONAJES BÍBLICOS */
-
+const preguntasPersonajesFacil = [
 {
 category:"Personajes bíblicos",
 level:"Fácil",
 question:"¿Quién venció al gigante Goliat?",
 answers:["David","Saúl","Salomón","Pedro"],
 correct:0,
-explanation:"David venció a Goliat confiando en Dios."
+explanation:"David venció a Goliat confiando en Dios.",
+reference:"1 Samuel 17:49-50"
 },
 {
 category:"Personajes bíblicos",
-level:"Fácil",
-question:"¿Qué mujer llegó a ser reina y ayudó a salvar a su pueblo?",
-answers:["Rut","Ester","Marta","Rebeca"],
-correct:1,
-explanation:"La reina Ester intercedió por su pueblo."
-},
-{
-category:"Personajes bíblicos",
-level:"Intermedio",
-question:"¿Quién interpretó los sueños del faraón en Egipto?",
-answers:["Daniel","José","Samuel","Aarón"],
-correct:1,
-explanation:"José interpretó los sueños del faraón."
-},
-{
-category:"Personajes bíblicos",
-level:"Intermedio",
-question:"¿Quién sucedió a Moisés como líder de Israel?",
-answers:["Caleb","Josué","Gedeón","Aarón"],
-correct:1,
-explanation:"Josué fue elegido para guiar al pueblo después de Moisés."
-},
-{
-category:"Personajes bíblicos",
-level:"Difícil",
-question:"¿Cómo se llamaba la madre del profeta Samuel?",
-answers:["Sara","Ana","Raquel","Débora"],
-correct:1,
-explanation:"Ana oró a Dios y fue la madre de Samuel."
-},
-{
-category:"Personajes bíblicos",
-level:"Difícil",
-question:"¿Qué mujer fue jueza y profetisa en Israel?",
-answers:["Miriam","Abigail","Débora","Noemí"],
-correct:2,
-explanation:"Débora fue jueza y profetisa de Israel."
-},
-
-/* ANTIGUO TESTAMENTO */
-
-{
-category:"Antiguo Testamento",
 level:"Fácil",
 question:"¿Quién construyó el arca?",
 answers:["Moisés","Noé","Abraham","Isaac"],
 correct:1,
-explanation:"Noé construyó el arca siguiendo las instrucciones de Dios."
+explanation:"Noé construyó el arca siguiendo las instrucciones de Dios.",
+reference:"Génesis 6:13-22"
 },
 {
-category:"Antiguo Testamento",
+category:"Personajes bíblicos",
 level:"Fácil",
-question:"¿Quién recibió las tablas de los Diez Mandamientos?",
-answers:["David","Josué","Moisés","Elías"],
-correct:2,
-explanation:"Moisés recibió las tablas de la ley en el monte Sinaí."
-},
-{
-category:"Antiguo Testamento",
-level:"Intermedio",
-question:"¿Qué ciudad cayó después de que Israel marchara alrededor de sus murallas?",
-answers:["Jerusalén","Jericó","Babilonia","Nínive"],
+question:"¿Quién fue la madre de Jesús?",
+answers:["Marta","María","Elisabet","Ana"],
 correct:1,
-explanation:"Las murallas de Jericó cayeron después de las instrucciones de Dios."
+explanation:"María fue escogida para ser la madre de Jesús.",
+reference:"Lucas 1:30-31"
 },
 {
-category:"Antiguo Testamento",
-level:"Intermedio",
-question:"¿Qué joven fue vendido por sus hermanos y llevado a Egipto?",
-answers:["Isaac","Benjamín","José","Esaú"],
-correct:2,
-explanation:"Los hermanos de José lo vendieron y fue llevado a Egipto."
-},
-{
-category:"Antiguo Testamento",
-level:"Difícil",
-question:"¿Qué rey pidió sabiduría a Dios?",
-answers:["Saúl","Salomón","Acab","Ezequías"],
-correct:1,
-explanation:"Salomón pidió sabiduría para gobernar al pueblo."
-},
-{
-category:"Antiguo Testamento",
-level:"Difícil",
-question:"¿Quién dirigió la reconstrucción de los muros de Jerusalén?",
-answers:["Esdras","Nehemías","Isaías","Jeremías"],
-correct:1,
-explanation:"Nehemías dirigió la reconstrucción de los muros de Jerusalén."
-},
-
-/* NUEVO TESTAMENTO */
-
-{
-category:"Nuevo Testamento",
+category:"Personajes bíblicos",
 level:"Fácil",
-question:"¿Quién bautizó a Jesús?",
-answers:["Pedro","Juan el Bautista","Pablo","Andrés"],
+question:"¿Qué reina arriesgó su vida para ayudar a su pueblo?",
+answers:["Rut","Ester","Sara","Rebeca"],
 correct:1,
-explanation:"Juan el Bautista bautizó a Jesús en el río Jordán."
+explanation:"Ester habló con el rey para proteger a su pueblo.",
+reference:"Ester 4:14-16"
 },
 {
-category:"Nuevo Testamento",
+category:"Personajes bíblicos",
 level:"Fácil",
-question:"¿Quién entregó a Jesús a sus enemigos?",
-answers:["Tomás","Judas Iscariote","Mateo","Felipe"],
-correct:1,
-explanation:"Judas Iscariote entregó a Jesús."
-},
-{
-category:"Nuevo Testamento",
-level:"Intermedio",
-question:"¿Qué apóstol escribió muchas cartas a las primeras iglesias?",
-answers:["Pablo","Andrés","Judas","Bartolomé"],
+question:"¿Quién fue tragado por un gran pez?",
+answers:["Jonás","Elías","Daniel","Samuel"],
 correct:0,
-explanation:"Pablo escribió numerosas cartas que forman parte del Nuevo Testamento."
+explanation:"Jonás estuvo dentro de un gran pez después de huir de su misión.",
+reference:"Jonás 1:17"
 },
 {
-category:"Nuevo Testamento",
-level:"Intermedio",
-question:"¿En qué isla recibió Juan la revelación del Apocalipsis?",
-answers:["Creta","Malta","Patmos","Chipre"],
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién recibió los Diez Mandamientos?",
+answers:["Josué","Aarón","Moisés","David"],
 correct:2,
-explanation:"Juan recibió la revelación en la isla de Patmos."
+explanation:"Moisés recibió las tablas de la ley en el monte Sinaí.",
+reference:"Éxodo 31:18"
 },
 {
-category:"Nuevo Testamento",
-level:"Difícil",
-question:"¿Quién es conocido como el primer mártir cristiano?",
-answers:["Esteban","Bernabé","Timoteo","Felipe"],
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue conocido por su gran fuerza?",
+answers:["Sansón","Gedeón","Samuel","Isaías"],
 correct:0,
-explanation:"Esteban fue el primer mártir cristiano mencionado en Hechos."
+explanation:"Sansón recibió una fuerza extraordinaria de Dios.",
+reference:"Jueces 16:17"
 },
 {
-category:"Nuevo Testamento",
-level:"Difícil",
-question:"¿Qué apóstol también era llamado Dídimo?",
-answers:["Pedro","Juan","Tomás","Mateo"],
-correct:2,
-explanation:"Tomás era llamado Dídimo, que significa gemelo."
-},
-
-/* LA VIDA DE JESÚS */
-
-{
-category:"La vida de Jesús",
+category:"Personajes bíblicos",
 level:"Fácil",
-question:"¿En qué ciudad nació Jesús?",
-answers:["Nazaret","Jerusalén","Belén","Capernaúm"],
-correct:2,
-explanation:"Jesús nació en Belén."
-},
-{
-category:"La vida de Jesús",
-level:"Fácil",
-question:"¿Cuál fue el primer milagro de Jesús según el Evangelio de Juan?",
-answers:["Sanar a un ciego","Caminar sobre el agua","Convertir agua en vino","Alimentar a cinco mil"],
-correct:2,
-explanation:"Jesús convirtió el agua en vino durante una boda en Caná."
-},
-{
-category:"La vida de Jesús",
-level:"Intermedio",
-question:"¿Cuántos días ayunó Jesús en el desierto?",
-answers:["7 días","12 días","30 días","40 días"],
-correct:3,
-explanation:"Jesús ayunó durante cuarenta días y cuarenta noches."
-},
-{
-category:"La vida de Jesús",
-level:"Intermedio",
-question:"¿Qué parábola cuenta la historia de un hijo que regresa a casa?",
-answers:["El sembrador","El hijo pródigo","La oveja perdida","Los talentos"],
+question:"¿Quién fue vendido por sus hermanos y llevado a Egipto?",
+answers:["Isaac","José","Jacob","Benjamín"],
 correct:1,
-explanation:"La parábola del hijo pródigo enseña sobre el perdón y la misericordia."
+explanation:"Los hermanos de José lo vendieron y fue llevado a Egipto.",
+reference:"Génesis 37:28"
 },
 {
-category:"La vida de Jesús",
-level:"Difícil",
-question:"¿Qué discípulo negó conocer a Jesús tres veces?",
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue el primer hombre según Génesis?",
+answers:["Noé","Abraham","Adán","Moisés"],
+correct:2,
+explanation:"Adán fue el primer hombre creado por Dios.",
+reference:"Génesis 2:7"
+},
+{
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue la primera mujer según Génesis?",
+answers:["Sara","Eva","Rut","María"],
+correct:1,
+explanation:"Eva fue creada por Dios y fue la primera mujer.",
+reference:"Génesis 2:21-22"
+},
+{
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue el padre de Isaac?",
+answers:["Jacob","Abraham","José","Moisés"],
+correct:1,
+explanation:"Abraham fue el padre de Isaac.",
+reference:"Génesis 21:3"
+},
+{
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue el hermano de Moisés que lo ayudó a hablar ante el faraón?",
+answers:["Aarón","Josué","Caleb","Elías"],
+correct:0,
+explanation:"Aarón acompañó a Moisés y habló por él.",
+reference:"Éxodo 4:14-16"
+},
+{
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue el discípulo que negó a Jesús tres veces?",
 answers:["Juan","Pedro","Tomás","Andrés"],
 correct:1,
-explanation:"Pedro negó a Jesús tres veces antes de que cantara el gallo."
+explanation:"Pedro negó conocer a Jesús tres veces.",
+reference:"Lucas 22:54-62"
 },
 {
-category:"La vida de Jesús",
-level:"Difícil",
-question:"¿Quién pidió a Pilato el cuerpo de Jesús para sepultarlo?",
-answers:["Nicodemo","José de Arimatea","Zaqueo","Simón de Cirene"],
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue el apóstol que antes perseguía a los cristianos?",
+answers:["Pablo","Pedro","Felipe","Mateo"],
+correct:0,
+explanation:"Saulo perseguía a los seguidores de Jesús antes de su conversión.",
+reference:"Hechos 9:1-6"
+},
+{
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién interpretó los sueños del faraón?",
+answers:["Daniel","José","Samuel","Aarón"],
 correct:1,
-explanation:"José de Arimatea pidió a Pilato el cuerpo de Jesús."
+explanation:"José explicó los sueños del faraón y anunció años de abundancia y hambre.",
+reference:"Génesis 41:15-30"
+},
+{
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue el hijo de Abraham y Sara?",
+answers:["Ismael","Isaac","Jacob","Esaú"],
+correct:1,
+explanation:"Isaac nació cuando Abraham y Sara ya eran ancianos.",
+reference:"Génesis 21:1-3"
+},
+{
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue la suegra de Rut?",
+answers:["Noemí","Ester","Marta","Raquel"],
+correct:0,
+explanation:"Rut acompañó fielmente a su suegra Noemí.",
+reference:"Rut 1:3-4"
+},
+{
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién escuchó la voz de Dios cuando era niño en el templo?",
+answers:["Samuel","David","Salomón","Josías"],
+correct:0,
+explanation:"Samuel escuchó el llamado de Dios cuando servía junto a Elí.",
+reference:"1 Samuel 3:4-10"
+},
+{
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue conocido como un hombre justo que caminó con Dios?",
+answers:["Noé","Caín","Faraón","Herodes"],
+correct:0,
+explanation:"Noé fue descrito como justo y caminó con Dios.",
+reference:"Génesis 6:9"
+},
+{
+category:"Personajes bíblicos",
+level:"Fácil",
+question:"¿Quién fue el rey conocido por su gran sabiduría?",
+answers:["Saúl","Salomón","Acab","Herodes"],
+correct:1,
+explanation:"Dios concedió gran sabiduría a Salomón.",
+reference:"1 Reyes 3:9-12"
 }
+];
 
+const preguntasPersonajesIntermedio = [
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién fue el padre de Juan el Bautista?",
+answers:["Zacarías","José","Simeón","Joaquín"],
+correct:0,
+explanation:"Zacarías era sacerdote y recibió el anuncio del nacimiento de Juan.",
+reference:"Lucas 1:13"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Qué profeta enfrentó a los profetas de Baal en el monte Carmelo?",
+answers:["Eliseo","Elías","Isaías","Jeremías"],
+correct:1,
+explanation:"Elías desafió a los profetas de Baal y Dios respondió con fuego.",
+reference:"1 Reyes 18:20-39"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién fue el hermano de Moisés?",
+answers:["Aarón","Josué","Caleb","Gedeón"],
+correct:0,
+explanation:"Aarón fue el hermano de Moisés y lo acompañó ante el faraón.",
+reference:"Éxodo 4:14"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Qué discípulo era conocido como el gemelo?",
+answers:["Pedro","Tomás","Juan","Andrés"],
+correct:1,
+explanation:"Tomás también era llamado Dídimo, que significa gemelo.",
+reference:"Juan 11:16"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién fue la madre del profeta Samuel?",
+answers:["Sara","Ana","Rebeca","Raquel"],
+correct:1,
+explanation:"Ana oró por un hijo y dedicó a Samuel al servicio de Dios.",
+reference:"1 Samuel 1:20-28"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Qué mujer escondió a los espías israelitas en Jericó?",
+answers:["Rut","Rahab","Débora","Jael"],
+correct:1,
+explanation:"Rahab recibió y protegió a los espías enviados por Josué.",
+reference:"Josué 2:1-6"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién fue el padre de Juan el Bautista?",
+answers:["Zacarías","José","Herodes","Felipe"],
+correct:0,
+explanation:"Zacarías y Elisabet fueron los padres de Juan.",
+reference:"Lucas 1:5-13"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Qué profeta sucedió a Elías?",
+answers:["Isaías","Eliseo","Jeremías","Ezequiel"],
+correct:1,
+explanation:"Eliseo recibió el manto de Elías y continuó su ministerio.",
+reference:"2 Reyes 2:9-15"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién fue el compañero de Pablo en varios viajes misioneros y autor del Evangelio que lleva su nombre?",
+answers:["Lucas","Pedro","Esteban","Timoteo"],
+correct:0,
+explanation:"Lucas acompañó a Pablo y escribió el Evangelio de Lucas y Hechos.",
+reference:"Colosenses 4:14; Hechos 16:10"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Qué joven acompañó a Pablo y fue destinatario de dos cartas del Nuevo Testamento?",
+answers:["Tito","Timoteo","Marcos","Silas"],
+correct:1,
+explanation:"Timoteo fue colaborador de Pablo y recibió dos cartas.",
+reference:"1 Timoteo 1:2"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién fue la esposa de Abraham?",
+answers:["Rebeca","Sara","Raquel","Lea"],
+correct:1,
+explanation:"Sara fue la esposa de Abraham y madre de Isaac.",
+reference:"Génesis 17:15-19"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Qué hombre ayudó a Jesús a llevar la cruz?",
+answers:["José de Arimatea","Simón de Cirene","Nicodemo","Zaqueo"],
+correct:1,
+explanation:"Simón de Cirene fue obligado a llevar la cruz detrás de Jesús.",
+reference:"Lucas 23:26"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién fue el primer mártir cristiano mencionado en Hechos?",
+answers:["Esteban","Bernabé","Felipe","Santiago"],
+correct:0,
+explanation:"Esteban fue apedreado después de dar testimonio de su fe.",
+reference:"Hechos 7:54-60"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Qué mujer fue la hermana de Moisés?",
+answers:["Miriam","Débora","Ester","Abigail"],
+correct:0,
+explanation:"Miriam fue hermana de Moisés y Aarón.",
+reference:"Éxodo 15:20"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién fue el padre de Salomón?",
+answers:["Saúl","David","Samuel","Eli"],
+correct:1,
+explanation:"Salomón fue hijo del rey David y Betsabé.",
+reference:"2 Samuel 12:24"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Qué discípulo era recaudador de impuestos antes de seguir a Jesús?",
+answers:["Mateo","Juan","Pedro","Felipe"],
+correct:0,
+explanation:"Mateo estaba sentado en el puesto de los tributos cuando Jesús lo llamó.",
+reference:"Mateo 9:9"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién fue el amigo de David que le mostró lealtad?",
+answers:["Jonatán","Absalón","Joab","Saúl"],
+correct:0,
+explanation:"Jonatán hizo un pacto de amistad con David.",
+reference:"1 Samuel 18:1-4"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Qué hombre pequeño de estatura subió a un árbol para ver a Jesús?",
+answers:["Bartimeo","Zaqueo","Nicodemo","Lázaro"],
+correct:1,
+explanation:"Zaqueo subió a un sicómoro porque quería ver a Jesús.",
+reference:"Lucas 19:2-4"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién fue el hermano de Marta y María que Jesús resucitó?",
+answers:["Jairo","Lázaro","Nicodemo","Simón"],
+correct:1,
+explanation:"Jesús llamó a Lázaro para que saliera del sepulcro.",
+reference:"Juan 11:38-44"
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Qué mujer fue conocida por su hospitalidad y por recibir a Eliseo?",
+answers:["La sunamita","Rut","Ester","Priscila"],
+correct:0,
+explanation:"Una mujer de Sunem preparó una habitación para Eliseo.",
+reference:"2 Reyes 4:8-10"
+}
+];
+
+const preguntasPersonajesDificil = [
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Quién fue el rey de Salem y sacerdote del Dios Altísimo que bendijo a Abraham?",
+answers:["Melquisedec","Abimelec","Jetro","Booz"],
+correct:0,
+explanation:"Melquisedec era rey de Salem y sacerdote del Dios Altísimo.",
+reference:"Génesis 14:18-20"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué profeta confrontó al rey David por su pecado con Betsabé?",
+answers:["Elías","Natán","Gad","Samuel"],
+correct:1,
+explanation:"Natán contó una parábola para hacer que David reconociera su pecado.",
+reference:"2 Samuel 12:1-7"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Quién fue el padre de Matusalén?",
+answers:["Noé","Enoc","Lamec","Jared"],
+correct:1,
+explanation:"Enoc fue el padre de Matusalén.",
+reference:"Génesis 5:21-22"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué juez de Israel hizo un voto antes de enfrentarse a los amonitas?",
+answers:["Gedeón","Jefté","Sansón","Barac"],
+correct:1,
+explanation:"Jefté hizo un voto que tuvo consecuencias muy dolorosas para su familia.",
+reference:"Jueces 11:30-35"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Quién fue el sumo sacerdote que encontró el libro de la Ley durante el reinado de Josías?",
+answers:["Hilcías","Abiatar","Sadoc","Aarón"],
+correct:0,
+explanation:"Hilcías encontró el libro de la Ley en el templo.",
+reference:"2 Reyes 22:8"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué rey de Judá fue sanado después de orar a Dios y recibió quince años más de vida?",
+answers:["Josías","Ezequías","Uzías","Manasés"],
+correct:1,
+explanation:"Dios escuchó la oración de Ezequías y prolongó su vida.",
+reference:"2 Reyes 20:1-6"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Quién fue el suegro de Moisés?",
+answers:["Jetro","Labán","Isaí","Abraham"],
+correct:0,
+explanation:"Jetro era sacerdote de Madián y suegro de Moisés.",
+reference:"Éxodo 3:1; 18:1"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué profetisa fue consultada durante el reinado del rey Josías?",
+answers:["Hulda","Débora","Miriam","Ana"],
+correct:0,
+explanation:"Hulda transmitió el mensaje de Dios a los enviados del rey.",
+reference:"2 Reyes 22:14-20"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué discípulo era conocido como el hijo de Alfeo?",
+answers:["Santiago","Pedro","Andrés","Juan"],
+correct:0,
+explanation:"Santiago, hijo de Alfeo, aparece entre los doce apóstoles.",
+reference:"Mateo 10:2-3"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Quién fue el maestro de Pablo según el relato de su formación en Jerusalén?",
+answers:["Gamaliel","Nicodemo","Bernabé","Anás"],
+correct:0,
+explanation:"Pablo explicó que había sido instruido a los pies de Gamaliel.",
+reference:"Hechos 22:3"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué matrimonio ayudó a Apolos a comprender con mayor precisión el camino de Dios?",
+answers:["Ananías y Safira","Aquila y Priscila","Zacarías y Elisabet","José y María"],
+correct:1,
+explanation:"Aquila y Priscila explicaron a Apolos más exactamente el camino de Dios.",
+reference:"Hechos 18:24-26"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué colaborador de Pablo fue enviado a Tesalónica para fortalecer a los creyentes?",
+answers:["Tito","Timoteo","Marcos","Lucas"],
+correct:1,
+explanation:"Pablo envió a Timoteo para animar y fortalecer a la iglesia.",
+reference:"1 Tesalonicenses 3:1-2"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué hombre fue elegido para ocupar el lugar de Judas Iscariote entre los doce apóstoles?",
+answers:["Bernabé","Matías","Silas","Esteban"],
+correct:1,
+explanation:"Matías fue elegido después de la oración y el sorteo.",
+reference:"Hechos 1:23-26"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué rey de Judá reinó siendo niño y promovió una reforma religiosa?",
+answers:["Josías","Acaz","Manasés","Roboam"],
+correct:0,
+explanation:"Josías comenzó a reinar a los ocho años y promovió la restauración del culto a Dios.",
+reference:"2 Reyes 22:1-2"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Quién era el padre de Juan Marcos?",
+answers:["La Biblia no lo menciona","Bernabé","Pedro","Silas"],
+correct:0,
+explanation:"El libro de Hechos menciona a su madre María, pero no identifica a su padre.",
+reference:"Hechos 12:12"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué rey persa permitió a los judíos regresar y reconstruir el templo?",
+answers:["Darío","Ciro","Asuero","Artajerjes"],
+correct:1,
+explanation:"Ciro publicó un decreto que permitió el regreso y la reconstrucción del templo.",
+reference:"Esdras 1:1-3"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué profeta fue llamado mientras era todavía muy joven?",
+answers:["Jeremías","Malaquías","Nahúm","Habacuc"],
+correct:0,
+explanation:"Dios llamó a Jeremías y le dijo que no debía considerarse demasiado joven.",
+reference:"Jeremías 1:4-7"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué mujer fue vendedora de púrpura y recibió a Pablo en Filipos?",
+answers:["Priscila","Lidia","Febe","Dorcas"],
+correct:1,
+explanation:"Lidia escuchó el mensaje de Pablo y abrió su casa para recibirlo.",
+reference:"Hechos 16:14-15"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué profeta fue llevado al cielo en un torbellino?",
+answers:["Eliseo","Elías","Isaías","Ezequiel"],
+correct:1,
+explanation:"Elías fue llevado al cielo en un torbellino.",
+reference:"2 Reyes 2:11"
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué hombre fue conocido como el consolador y compañero de Pablo, y era levita de Chipre?",
+answers:["Silas","Bernabé","Tito","Timoteo"],
+correct:1,
+explanation:"Bernabé era levita, natural de Chipre, y los apóstoles le dieron ese nombre.",
+reference:"Hechos 4:36"
+}
+];
+const preguntasAntiguoFacil = [
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Quién fue el primer hombre creado por Dios?",
+answers:["Noé","Adán","Abraham","Moisés"],
+correct:1,
+explanation:"Dios creó a Adán del polvo de la tierra.",
+reference:"Génesis 2:7"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Cómo se llamaba la primera mujer?",
+answers:["Sara","Eva","Rebeca","Raquel"],
+correct:1,
+explanation:"Eva fue la primera mujer, creada por Dios.",
+reference:"Génesis 2:21-22"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Qué señal puso Dios en el cielo como pacto con Noé?",
+answers:["Una estrella","Un arcoíris","Una nube","Un relámpago"],
+correct:1,
+explanation:"El arcoíris fue la señal del pacto de Dios con la tierra.",
+reference:"Génesis 9:12-13"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Cómo se llamaba el hijo de Abraham y Sara?",
+answers:["Ismael","Isaac","Jacob","José"],
+correct:1,
+explanation:"Abraham y Sara tuvieron un hijo llamado Isaac.",
+reference:"Génesis 21:1-3"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Quién soñó con una escalera que llegaba al cielo?",
+answers:["Jacob","José","Isaac","Esaú"],
+correct:0,
+explanation:"Jacob soñó con una escalera que llegaba al cielo.",
+reference:"Génesis 28:10-12"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Cuántos días tardó Dios en crear los cielos y la tierra?",
+answers:["Tres","Cinco","Seis","Siete"],
+correct:2,
+explanation:"Dios realizó la creación en seis días y descansó el séptimo.",
+reference:"Génesis 1:31–2:2"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Quién fue tragado por un gran pez?",
+answers:["Elías","Jonás","Jeremías","Daniel"],
+correct:1,
+explanation:"Jonás estuvo dentro de un gran pez durante tres días y tres noches.",
+reference:"Jonás 1:17"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Qué alimento cayó del cielo para alimentar a Israel en el desierto?",
+answers:["Pan común","Maná","Uvas","Pescado"],
+correct:1,
+explanation:"Dios envió maná para alimentar al pueblo de Israel.",
+reference:"Éxodo 16:14-15"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Quién fue el hermano de Moisés que habló ante el faraón?",
+answers:["Josué","Aarón","Caleb","Gedeón"],
+correct:1,
+explanation:"Aarón acompañó a Moisés y habló ante el faraón.",
+reference:"Éxodo 4:14-16"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Qué mar cruzaron los israelitas cuando salieron de Egipto?",
+answers:["Mar Muerto","Mar Rojo","Mar de Galilea","Mar Mediterráneo"],
+correct:1,
+explanation:"Dios abrió el mar Rojo para que Israel pudiera cruzar.",
+reference:"Éxodo 14:21-22"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Quién fue el padre de Isaac?",
+answers:["Jacob","Abraham","Moisés","Noé"],
+correct:1,
+explanation:"Abraham fue el padre de Isaac.",
+reference:"Génesis 21:3"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Qué instrumento tocaba David para tranquilizar a Saúl?",
+answers:["Trompeta","Arpa","Flauta","Tambor"],
+correct:1,
+explanation:"David tocaba el arpa para Saúl.",
+reference:"1 Samuel 16:23"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Quién fue lanzado al foso de los leones?",
+answers:["Daniel","David","Samuel","Esdras"],
+correct:0,
+explanation:"Daniel fue arrojado al foso, pero Dios lo protegió.",
+reference:"Daniel 6:16-22"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Qué alimento encontró Esaú preparado por Jacob?",
+answers:["Pan y pescado","Un guiso de lentejas","Carne asada","Frutas"],
+correct:1,
+explanation:"Jacob preparó un guiso de lentejas que Esaú pidió.",
+reference:"Génesis 25:29-34"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Quién fue la esposa de Isaac?",
+answers:["Rebeca","Raquel","Lea","Rut"],
+correct:0,
+explanation:"Rebeca llegó a ser la esposa de Isaac.",
+reference:"Génesis 24:67"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Qué joven derrotó a Goliat?",
+answers:["Salomón","David","Josías","Samuel"],
+correct:1,
+explanation:"David venció al gigante Goliat confiando en Dios.",
+reference:"1 Samuel 17:49-50"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Quién fue vendido por sus hermanos y llevado a Egipto?",
+answers:["Benjamín","José","Rubén","Judá"],
+correct:1,
+explanation:"Los hermanos de José lo vendieron y fue llevado a Egipto.",
+reference:"Génesis 37:28"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Qué ciudad fue destruida junto con Gomorra?",
+answers:["Jericó","Sodoma","Nínive","Babilonia"],
+correct:1,
+explanation:"Sodoma y Gomorra fueron destruidas por su maldad.",
+reference:"Génesis 19:24-25"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Quién fue el hombre más fuerte mencionado en la Biblia?",
+answers:["Sansón","Gedeón","Saúl","Jonatán"],
+correct:0,
+explanation:"Sansón recibió una fuerza extraordinaria de Dios.",
+reference:"Jueces 16:17"
+},
+{
+category:"Antiguo Testamento", level:"Fácil",
+question:"¿Qué profeta fue llevado al cielo en un torbellino?",
+answers:["Isaías","Elías","Eliseo","Jeremías"],
+correct:1,
+explanation:"Elías fue llevado al cielo en un torbellino.",
+reference:"2 Reyes 2:11"
+}
+];
+  const preguntasAntiguoIntermedio = [
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Cuántos años tenía Abraham cuando nació Isaac?",
+answers:["75 años","86 años","100 años","120 años"],
+correct:2,
+explanation:"Abraham tenía cien años cuando nació Isaac.",
+reference:"Génesis 21:5"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Cómo se llamaba el hermano de Jacob que vendió su primogenitura?",
+answers:["José","Esaú","Benjamín","Rubén"],
+correct:1,
+explanation:"Esaú vendió su primogenitura a Jacob por un plato de comida.",
+reference:"Génesis 25:29-34"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Cuántos años estuvo Israel en el desierto antes de entrar en Canaán?",
+answers:["12 años","20 años","40 años","70 años"],
+correct:2,
+explanation:"La generación de Israel estuvo cuarenta años en el desierto.",
+reference:"Números 14:33-34"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Quién fue el padre de los doce hijos que dieron origen a las tribus de Israel?",
+answers:["Isaac","Jacob","Abraham","José"],
+correct:1,
+explanation:"Jacob, cuyo nombre también fue Israel, tuvo doce hijos.",
+reference:"Génesis 35:22-26"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué juez de Israel pidió una señal a Dios usando un vellón de lana?",
+answers:["Sansón","Gedeón","Débora","Jefté"],
+correct:1,
+explanation:"Gedeón pidió señales con un vellón para confirmar la voluntad de Dios.",
+reference:"Jueces 6:36-40"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué profeta confrontó al rey David por su pecado con Betsabé?",
+answers:["Elías","Natán","Samuel","Eliseo"],
+correct:1,
+explanation:"El profeta Natán confrontó a David mediante una parábola.",
+reference:"2 Samuel 12:1-7"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué rey de Judá encontró el libro de la Ley durante las reparaciones del templo?",
+answers:["Josías","Acaz","Manasés","Roboam"],
+correct:0,
+explanation:"Durante el reinado de Josías, el sacerdote Hilcías encontró el libro de la Ley.",
+reference:"2 Reyes 22:8-11"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Quién fue el sucesor del profeta Elías?",
+answers:["Isaías","Eliseo","Jeremías","Ezequiel"],
+correct:1,
+explanation:"Eliseo recibió el manto de Elías y continuó su ministerio profético.",
+reference:"2 Reyes 2:9-15"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué mujer escondió a los espías israelitas en Jericó?",
+answers:["Débora","Rahab","Rut","Abigail"],
+correct:1,
+explanation:"Rahab escondió a los espías y los ayudó a escapar.",
+reference:"Josué 2:1-6"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué rey construyó el primer templo de Jerusalén?",
+answers:["David","Salomón","Saúl","Ezequías"],
+correct:1,
+explanation:"Salomón construyó el templo que su padre David había deseado edificar.",
+reference:"1 Reyes 6:1"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué profeta tuvo una visión de un valle lleno de huesos secos?",
+answers:["Daniel","Ezequiel","Amós","Oseas"],
+correct:1,
+explanation:"Ezequiel vio cómo los huesos secos volvían a tener vida.",
+reference:"Ezequiel 37:1-10"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué reina visitó a Salomón para probar su sabiduría con preguntas difíciles?",
+answers:["La reina de Egipto","La reina de Sabá","La reina Ester","La reina Atalía"],
+correct:1,
+explanation:"La reina de Sabá viajó para conocer la sabiduría de Salomón.",
+reference:"1 Reyes 10:1-3"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué profeta desafió a los profetas de Baal en el monte Carmelo?",
+answers:["Eliseo","Elías","Samuel","Jonás"],
+correct:1,
+explanation:"Elías desafió a los profetas de Baal para mostrar quién era el verdadero Dios.",
+reference:"1 Reyes 18:20-39"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Quién interpretó la escritura que apareció en la pared durante un banquete?",
+answers:["José","Daniel","Esdras","Nehemías"],
+correct:1,
+explanation:"Daniel explicó el mensaje escrito durante el banquete del rey Belsasar.",
+reference:"Daniel 5:25-28"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué profeta fue llamado por Dios cuando todavía era un niño?",
+answers:["Jeremías","Samuel","Malaquías","Joel"],
+correct:1,
+explanation:"Samuel escuchó la voz de Dios cuando servía junto al sacerdote Elí.",
+reference:"1 Samuel 3:1-10"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué hombre perdió sus riquezas y su salud, pero mantuvo su fe en Dios?",
+answers:["Job","Lot","Mardoqueo","Abraham"],
+correct:0,
+explanation:"Job atravesó grandes pruebas y siguió buscando a Dios.",
+reference:"Job 1:13-22"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Quién fue la suegra de Rut?",
+answers:["Ana","Noemí","Mical","Lea"],
+correct:1,
+explanation:"Rut permaneció junto a Noemí después de quedar viuda.",
+reference:"Rut 1:3-5, 16-17"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué profeta anunció que el Mesías nacería de una virgen?",
+answers:["Isaías","Amós","Jonás","Nahúm"],
+correct:0,
+explanation:"Isaías anunció la señal de una joven que concebiría y daría a luz un hijo.",
+reference:"Isaías 7:14"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué sacerdote crió a Samuel en el templo?",
+answers:["Aarón","Elí","Sadoc","Abiatar"],
+correct:1,
+explanation:"Elí cuidó y enseñó a Samuel durante su niñez en el santuario.",
+reference:"1 Samuel 2:11, 18"
+},
+{
+category:"Antiguo Testamento", level:"Intermedio",
+question:"¿Qué profeta recibió la orden de casarse con Gomer?",
+answers:["Oseas","Joel","Miqueas","Habacuc"],
+correct:0,
+explanation:"Dios utilizó el matrimonio de Oseas como una señal para Israel.",
+reference:"Oseas 1:2-3"
+}
+];
+  const preguntasAntiguoDificil = [
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué sacerdote encontró el libro de la Ley durante el reinado de Josías?",
+answers:["Sadoc","Hilcías","Abiatar","Ahimelec"],
+correct:1,
+explanation:"Hilcías encontró el libro de la Ley en el templo.",
+reference:"2 Reyes 22:8"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué rey de Israel reinó solamente siete días en Tirsa?",
+answers:["Zimri","Omri","Ela","Baasa"],
+correct:0,
+explanation:"Zimri reinó siete días antes de que Omri tomara el poder.",
+reference:"1 Reyes 16:15-18"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Quién fue el padre de Matusalén?",
+answers:["Lamec","Enoc","Jared","Noé"],
+correct:1,
+explanation:"Enoc fue el padre de Matusalén.",
+reference:"Génesis 5:21-22"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué juez hizo un voto que involucró a su hija?",
+answers:["Gedeón","Jefté","Sansón","Barac"],
+correct:1,
+explanation:"Jefté hizo un voto precipitado antes de luchar contra los amonitas.",
+reference:"Jueces 11:30-35"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué profeta vio al Señor sentado en un trono alto y sublime?",
+answers:["Jeremías","Isaías","Ezequiel","Daniel"],
+correct:1,
+explanation:"Isaías tuvo una visión del Señor rodeado de serafines.",
+reference:"Isaías 6:1-3"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué rey de Judá fue herido de lepra por intentar ofrecer incienso en el templo?",
+answers:["Uzías","Josafat","Joás","Amasías"],
+correct:0,
+explanation:"Uzías fue castigado por asumir una función sacerdotal que no le correspondía.",
+reference:"2 Crónicas 26:16-21"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Cuál era el nombre babilónico de Daniel?",
+answers:["Sadrac","Mesac","Abed-nego","Beltsasar"],
+correct:3,
+explanation:"Daniel recibió el nombre de Beltsasar en Babilonia.",
+reference:"Daniel 1:6-7"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué profeta fue enviado a Bet-el y recibió una advertencia de no comer ni beber allí?",
+answers:["Un varón de Dios de Judá","Elías","Eliseo","Micaías"],
+correct:0,
+explanation:"Un varón de Dios recibió instrucciones específicas, pero fue engañado por un profeta anciano.",
+reference:"1 Reyes 13:1-24"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué rey de Judá reinó durante cincuenta y cinco años?",
+answers:["Ezequías","Manasés","Josías","Acaz"],
+correct:1,
+explanation:"Manasés reinó cincuenta y cinco años en Jerusalén.",
+reference:"2 Reyes 21:1"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Quién fue el padre del rey Ezequías?",
+answers:["Jotam","Acaz","Uzías","Manasés"],
+correct:1,
+explanation:"Acaz fue el padre de Ezequías.",
+reference:"2 Reyes 16:20; 18:1"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué profeta vio un rollo que volaba en una visión?",
+answers:["Zacarías","Malaquías","Amós","Hageo"],
+correct:0,
+explanation:"Zacarías vio un rollo volante que representaba una maldición sobre la tierra.",
+reference:"Zacarías 5:1-4"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Quién fue el rey que consultó a la adivina de Endor?",
+answers:["David","Saúl","Salomón","Jeroboam"],
+correct:1,
+explanation:"Saúl consultó a la mujer de Endor antes de la batalla contra los filisteos.",
+reference:"1 Samuel 28:7-8"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué hijo de David intentó proclamarse rey durante la vejez de su padre?",
+answers:["Absalón","Adonías","Amnón","Salomón"],
+correct:1,
+explanation:"Adonías intentó tomar el trono, pero David confirmó a Salomón como sucesor.",
+reference:"1 Reyes 1:5-30"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué profeta anunció que el gobernante de Israel saldría de Belén?",
+answers:["Miqueas","Isaías","Jeremías","Oseas"],
+correct:0,
+explanation:"Miqueas anunció que de Belén saldría el gobernante de Israel.",
+reference:"Miqueas 5:2"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué rey de Judá recibió quince años más de vida después de orar?",
+answers:["Josías","Ezequías","Manasés","Roboam"],
+correct:1,
+explanation:"Dios escuchó la oración de Ezequías y le concedió quince años más.",
+reference:"2 Reyes 20:1-6"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Quién fue el escriba que leyó la Ley ante el pueblo después del regreso del exilio?",
+answers:["Nehemías","Esdras","Zorobabel","Josué"],
+correct:1,
+explanation:"Esdras leyó el libro de la Ley y ayudó al pueblo a comprenderlo.",
+reference:"Nehemías 8:1-8"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué profeta vio cuatro carros que salían de entre dos montes de bronce?",
+answers:["Daniel","Zacarías","Ezequiel","Isaías"],
+correct:1,
+explanation:"Zacarías recibió la visión de cuatro carros como parte de sus revelaciones.",
+reference:"Zacarías 6:1-5"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué rey de Israel fue herido por una flecha disparada al azar durante una batalla?",
+answers:["Acab","Jeroboam","Omri","Jehú"],
+correct:0,
+explanation:"Acab fue herido por una flecha durante la batalla en Ramot de Galaad.",
+reference:"1 Reyes 22:34-35"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué hombre fue escogido para reconstruir el templo junto con Zorobabel?",
+answers:["Josué hijo de Josadac","Esdras","Nehemías","Mardoqueo"],
+correct:0,
+explanation:"Josué, el sumo sacerdote, colaboró con Zorobabel en la reconstrucción del templo.",
+reference:"Hageo 1:12-14"
+},
+{
+category:"Antiguo Testamento", level:"Difícil",
+question:"¿Qué profeta anunció que el justo viviría por su fe?",
+answers:["Habacuc","Sofonías","Nahúm","Abdías"],
+correct:0,
+explanation:"Habacuc declaró que el justo por su fe viviría.",
+reference:"Habacuc 2:4"
+}
+];
+  const preguntasNuevoFacil = [
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Cómo se llamaba la madre de Jesús?",
+answers:["Marta","María","Elisabet","Ana"],
+correct:1,
+explanation:"María fue la madre de Jesús.",
+reference:"Lucas 1:30-31"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Cómo se llamaba el padre terrenal de Jesús?",
+answers:["José","Zacarías","Simeón","Joaquín"],
+correct:0,
+explanation:"José fue el esposo de María y padre legal de Jesús.",
+reference:"Mateo 1:18-25"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Cuántos apóstoles escogió Jesús?",
+answers:["7","10","12","15"],
+correct:2,
+explanation:"Jesús escogió a doce apóstoles.",
+reference:"Lucas 6:13-16"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Quién era el hermano de Marta y María?",
+answers:["Lázaro","Nicodemo","Bartimeo","Zaqueo"],
+correct:0,
+explanation:"Lázaro era hermano de Marta y María.",
+reference:"Juan 11:1-2"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Qué recaudador de impuestos se convirtió en discípulo de Jesús?",
+answers:["Zaqueo","Mateo","Herodes","Cornelio"],
+correct:1,
+explanation:"Mateo dejó su puesto de recaudador para seguir a Jesús.",
+reference:"Mateo 9:9"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Quién fue el primer mártir cristiano mencionado en Hechos?",
+answers:["Pedro","Esteban","Pablo","Bernabé"],
+correct:1,
+explanation:"Esteban murió por su fe en Jesús.",
+reference:"Hechos 7:59-60"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿En qué ciudad nació Juan el Bautista según Lucas?",
+answers:["Belén","Nazaret","Una ciudad de la región montañosa de Judá","Jerusalén"],
+correct:2,
+explanation:"Zacarías y Elisabet vivían en una ciudad de la región montañosa de Judá.",
+reference:"Lucas 1:39-40"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Quién era el gobernador romano que autorizó la crucifixión de Jesús?",
+answers:["Herodes Antipas","Poncio Pilato","César Augusto","Félix"],
+correct:1,
+explanation:"Poncio Pilato entregó a Jesús para que fuera crucificado.",
+reference:"Juan 19:16"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Qué apóstol caminó sobre el agua hacia Jesús?",
+answers:["Juan","Pedro","Andrés","Tomás"],
+correct:1,
+explanation:"Pedro caminó sobre el agua cuando Jesús lo llamó.",
+reference:"Mateo 14:28-29"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Quién acompañó a Pablo en algunos de sus viajes misioneros?",
+answers:["Bernabé","Caifás","Herodes","Pilato"],
+correct:0,
+explanation:"Bernabé acompañó a Pablo en su primer viaje misionero.",
+reference:"Hechos 13:2-4"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Qué discípulo era conocido como el discípulo amado?",
+answers:["Pedro","Juan","Mateo","Felipe"],
+correct:1,
+explanation:"El Evangelio de Juan utiliza esa expresión para referirse a uno de los discípulos.",
+reference:"Juan 13:23"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Qué mujer reconoció a Jesús después de su resurrección cerca del sepulcro?",
+answers:["Marta","María Magdalena","Salomé","Priscila"],
+correct:1,
+explanation:"María Magdalena reconoció a Jesús cuando él la llamó por su nombre.",
+reference:"Juan 20:14-16"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿En qué día de la semana resucitó Jesús?",
+answers:["Sábado","Domingo","Lunes","Viernes"],
+correct:1,
+explanation:"Las mujeres encontraron el sepulcro vacío el primer día de la semana.",
+reference:"Lucas 24:1-6"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Qué apóstol era hermano de Pedro?",
+answers:["Andrés","Santiago","Juan","Felipe"],
+correct:0,
+explanation:"Andrés era hermano de Simón Pedro.",
+reference:"Mateo 4:18"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Qué nombre recibió Saulo después de comenzar su ministerio?",
+answers:["Simón","Pablo","Bernabé","Marcos"],
+correct:1,
+explanation:"Saulo también es conocido como Pablo en el relato de Hechos.",
+reference:"Hechos 13:9"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Quién fue elegido para ocupar el lugar de Judas Iscariote entre los doce?",
+answers:["Matías","Silas","Timoteo","Marcos"],
+correct:0,
+explanation:"Matías fue elegido después de la oración y el sorteo.",
+reference:"Hechos 1:23-26"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Qué médico escribió el Evangelio que lleva su nombre y el libro de Hechos?",
+answers:["Marcos","Lucas","Mateo","Juan"],
+correct:1,
+explanation:"Lucas fue compañero de Pablo y autor del Evangelio de Lucas y Hechos.",
+reference:"Lucas 1:1-4; Hechos 1:1"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Cómo se llamaba el hombre que ayudó a Jesús a llevar la cruz?",
+answers:["Simón de Cirene","José de Arimatea","Nicodemo","Bartimeo"],
+correct:0,
+explanation:"Simón de Cirene fue obligado a llevar la cruz de Jesús.",
+reference:"Lucas 23:26"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Qué apóstol dudó de la resurrección hasta ver a Jesús?",
+answers:["Tomás","Pedro","Andrés","Santiago"],
+correct:0,
+explanation:"Tomás pidió ver las señales de los clavos antes de creer.",
+reference:"Juan 20:24-29"
+},
+{
+category:"Nuevo Testamento", level:"Fácil",
+question:"¿Qué libro cuenta cómo nació y creció la primera iglesia cristiana?",
+answers:["Romanos","Hechos de los Apóstoles","Apocalipsis","Hebreos"],
+correct:1,
+explanation:"Hechos relata la expansión de la iglesia después de la ascensión de Jesús.",
+reference:"Hechos 1:1-8"
+}
+];
+  const preguntasNuevoIntermedio = [
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Quién era el sumo sacerdote cuando Jesús fue llevado ante el Sanedrín?",
+answers:["Anás","Caifás","Gamaliel","Zacarías"],
+correct:1,
+explanation:"Caifás era el sumo sacerdote durante el juicio religioso de Jesús.",
+reference:"Mateo 26:57"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿En qué ciudad fueron llamados cristianos por primera vez los discípulos?",
+answers:["Jerusalén","Antioquía","Éfeso","Corinto"],
+correct:1,
+explanation:"En Antioquía los discípulos fueron llamados cristianos por primera vez.",
+reference:"Hechos 11:26"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Quién fue el primer gentil bautizado después de recibir la predicación de Pedro?",
+answers:["Cornelio","Sergio Paulo","El etíope","Lidia"],
+correct:0,
+explanation:"Cornelio y su familia recibieron el mensaje y el Espíritu Santo.",
+reference:"Hechos 10:1-48"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Qué matrimonio explicó más exactamente el camino de Dios a Apolos?",
+answers:["Ananías y Safira","Aquila y Priscila","Zacarías y Elisabet","Herodes y Herodías"],
+correct:1,
+explanation:"Aquila y Priscila ayudaron a Apolos a comprender mejor la enseñanza.",
+reference:"Hechos 18:24-26"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿En qué ciudad Pablo y Silas fueron encarcelados y cantaron himnos?",
+answers:["Éfeso","Filipos","Atenas","Roma"],
+correct:1,
+explanation:"En Filipos fueron encarcelados y oraban y cantaban a Dios.",
+reference:"Hechos 16:22-25"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Qué joven cayó de una ventana mientras Pablo predicaba en Troas?",
+answers:["Timoteo","Eutico","Tito","Onésimo"],
+correct:1,
+explanation:"Eutico cayó desde un tercer piso mientras Pablo hablaba durante muchas horas.",
+reference:"Hechos 20:7-12"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Quién acompañó a Pablo cuando llevó una ofrenda a Jerusalén?",
+answers:["Tito","Bernabé","Lucas","Demetrio"],
+correct:0,
+explanation:"Tito colaboró con Pablo en el ministerio y en el servicio a las iglesias.",
+reference:"2 Corintios 8:16-19"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Qué mujer vendedora de púrpura recibió el mensaje de Pablo en Filipos?",
+answers:["Priscila","Lidia","Febe","Dorcas"],
+correct:1,
+explanation:"Lidia escuchó a Pablo y fue bautizada junto con su familia.",
+reference:"Hechos 16:14-15"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Qué joven colaborador de Pablo tenía una madre creyente llamada Eunice?",
+answers:["Tito","Timoteo","Marcos","Silas"],
+correct:1,
+explanation:"Timoteo tenía una madre creyente y una abuela llamada Loida.",
+reference:"2 Timoteo 1:5"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿En qué ciudad habló Pablo en el Areópago?",
+answers:["Corinto","Atenas","Roma","Tesalónica"],
+correct:1,
+explanation:"Pablo habló a los atenienses acerca del Dios verdadero en el Areópago.",
+reference:"Hechos 17:22-23"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Quién fue el gobernador romano que escuchó a Pablo junto con su esposa Drusila?",
+answers:["Félix","Festo","Pilato","Galión"],
+correct:0,
+explanation:"Félix escuchó a Pablo y habló con él acerca de la fe en Cristo.",
+reference:"Hechos 24:24"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Qué apóstol escribió la carta dirigida a Filemón?",
+answers:["Pedro","Pablo","Juan","Santiago"],
+correct:1,
+explanation:"Pablo escribió a Filemón para interceder por Onésimo.",
+reference:"Filemón 1:1"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Qué mujer discípula de Jope era conocida por sus buenas obras y limosnas?",
+answers:["Dorcas","Lidia","Marta","Febe"],
+correct:0,
+explanation:"Dorcas, también llamada Tabita, ayudaba a muchas personas.",
+reference:"Hechos 9:36"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Quién fue el joven que huyó dejando su ropa cuando arrestaron a Jesús?",
+answers:["Juan Marcos","Timoteo","Lucas","Bernabé"],
+correct:0,
+explanation:"El Evangelio de Marcos relata que un joven huyó dejando su ropa.",
+reference:"Marcos 14:51-52"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Qué profeta del Antiguo Testamento citó Pedro en el día de Pentecostés?",
+answers:["Isaías","Joel","Jeremías","Ezequiel"],
+correct:1,
+explanation:"Pedro explicó que lo ocurrido cumplía la profecía de Joel.",
+reference:"Hechos 2:16-21"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Quién era el compañero de Pablo que fue llamado el médico amado?",
+answers:["Tito","Lucas","Silas","Timoteo"],
+correct:1,
+explanation:"Pablo menciona a Lucas como el médico amado.",
+reference:"Colosenses 4:14"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Qué hombre de Chipre fue conocido como hijo de consolación?",
+answers:["Silas","Bernabé","Marcos","Apolos"],
+correct:1,
+explanation:"Bernabé recibió ese sobrenombre y apoyó a los primeros creyentes.",
+reference:"Hechos 4:36-37"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Quién fue el rey que ordenó ejecutar a Santiago, hermano de Juan?",
+answers:["Herodes Agripa I","Herodes Antipas","César Nerón","Félix"],
+correct:0,
+explanation:"Herodes Agripa I mandó matar a Santiago y encarceló a Pedro.",
+reference:"Hechos 12:1-2"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Qué libro describe la visión de Pedro sobre animales y su encuentro con Cornelio?",
+answers:["Romanos","Hechos","Gálatas","Hebreos"],
+correct:1,
+explanation:"El libro de Hechos relata cómo Dios mostró a Pedro que no debía considerar impuros a los gentiles.",
+reference:"Hechos 10:9-28"
+},
+{
+category:"Nuevo Testamento", level:"Intermedio",
+question:"¿Qué iglesia recibió la carta que habla de la armadura de Dios?",
+answers:["La iglesia de Roma","La iglesia de Éfeso","La iglesia de Corinto","La iglesia de Galacia"],
+correct:1,
+explanation:"Pablo enseñó a los creyentes de Éfeso a vestirse con toda la armadura de Dios.",
+reference:"Efesios 6:10-18"
+}
+];
+  const preguntasNuevoDificil = [
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Quién era el sumo sacerdote que interrogó a Pedro y Juan después de sanar al hombre cojo?",
+answers:["Anás","Caifás","Gamaliel","Nicodemo"],
+correct:0,
+explanation:"Anás participó en el interrogatorio de Pedro y Juan junto con otros dirigentes.",
+reference:"Hechos 4:5-6"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué profeta anunció una gran hambre durante el reinado de Claudio?",
+answers:["Agabo","Silas","Judas Barsabás","Simeón"],
+correct:0,
+explanation:"Agabo anunció por el Espíritu que vendría una gran hambre.",
+reference:"Hechos 11:27-28"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Quién era el procónsul de Chipre que creyó después de escuchar a Pablo?",
+answers:["Sergio Paulo","Galión","Félix","Festo"],
+correct:0,
+explanation:"Sergio Paulo quedó maravillado por la enseñanza del Señor.",
+reference:"Hechos 13:6-12"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué hombre fue conocido como el mago que intentó comprar el don de Dios?",
+answers:["Elimas","Simón","Demetrio","Alejandro"],
+correct:1,
+explanation:"Simón ofreció dinero para recibir la autoridad de impartir el Espíritu Santo.",
+reference:"Hechos 8:18-24"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué colaborador de Pablo fue dejado enfermo en Mileto?",
+answers:["Timoteo","Trófimo","Tito","Epafrodito"],
+correct:1,
+explanation:"Pablo menciona que dejó a Trófimo enfermo en Mileto.",
+reference:"2 Timoteo 4:20"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Quién era el maestro judío que aconsejó al Sanedrín tener cuidado con lo que hacía contra los apóstoles?",
+answers:["Nicodemo","Gamaliel","Anás","Caifás"],
+correct:1,
+explanation:"Gamaliel aconsejó dejar a los apóstoles, señalando que si su obra era de Dios no podrían detenerla.",
+reference:"Hechos 5:34-39"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué colaborador de Pablo fue enviado a Tesalónica para fortalecer a los creyentes?",
+answers:["Timoteo","Tito","Lucas","Aristarco"],
+correct:0,
+explanation:"Pablo envió a Timoteo para animar y fortalecer a la iglesia.",
+reference:"1 Tesalonicenses 3:1-2"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Quién era el orador que acusó a Pablo ante el gobernador Félix?",
+answers:["Tértulo","Alejandro","Demetrio","Esceva"],
+correct:0,
+explanation:"Tértulo presentó las acusaciones contra Pablo ante Félix.",
+reference:"Hechos 24:1-2"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué hombre de Colosas era un fiel ministro y colaborador de Pablo?",
+answers:["Epafras","Tíquico","Crescente","Demas"],
+correct:0,
+explanation:"Epafras fue descrito como un fiel ministro de Cristo para los colosenses.",
+reference:"Colosenses 1:7"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué rey escuchó a Pablo y dijo que por poco lo convencía de hacerse cristiano?",
+answers:["Agripa","Festo","Herodes Antipas","Nerón"],
+correct:0,
+explanation:"El rey Agripa escuchó la defensa de Pablo y respondió con esas palabras.",
+reference:"Hechos 26:27-28"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Quién fue el esclavo de Filemón que Pablo pidió recibir como hermano?",
+answers:["Onésimo","Tíquico","Epafrodito","Aristarco"],
+correct:0,
+explanation:"Pablo intercedió por Onésimo para que Filemón lo recibiera como hermano amado.",
+reference:"Filemón 1:10-16"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué colaborador de Pablo era originario de Tesalónica?",
+answers:["Aristarco","Timoteo","Tito","Apolos"],
+correct:0,
+explanation:"Aristarco era macedonio de Tesalónica y acompañó a Pablo.",
+reference:"Hechos 20:4; 27:2"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué mujer es recomendada por Pablo como servidora de la iglesia de Cencrea?",
+answers:["Priscila","Febe","Lidia","Evodia"],
+correct:1,
+explanation:"Pablo recomienda a Febe a los creyentes de Roma.",
+reference:"Romanos 16:1-2"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Quién era el sumo sacerdote mencionado durante el discurso de Esteban?",
+answers:["Anás","Caifás","Elí","Sadoc"],
+correct:1,
+explanation:"El relato de Hechos menciona a Caifás en el contexto del juicio de Jesús; Esteban habló ante el concilio. Esta pregunta debe interpretarse con cuidado: Hechos 7 no identifica al sumo sacerdote por nombre.",
+reference:"Hechos 6:12-15; 7:1"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué discípulo fue llamado Barsabás y también tenía el sobrenombre Justo?",
+answers:["José","Silas","Matías","Judas"],
+correct:0,
+explanation:"José Barsabás, llamado Justo, fue propuesto junto con Matías para ocupar el lugar de Judas.",
+reference:"Hechos 1:23"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué colaborador de Pablo fue enviado a Éfeso junto con Timoteo?",
+answers:["Erasto","Tito","Lucas","Bernabé"],
+correct:0,
+explanation:"Pablo envió a Timoteo y Erasto a Macedonia, mientras él permanecía en Asia.",
+reference:"Hechos 19:21-22"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué iglesia recibió la advertencia de que había abandonado su primer amor?",
+answers:["Esmirna","Éfeso","Pérgamo","Laodicea"],
+correct:1,
+explanation:"Jesús reconoció las obras de Éfeso, pero le pidió recuperar su primer amor.",
+reference:"Apocalipsis 2:1-5"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué emperador romano estaba en el poder durante el viaje de Pablo hacia Roma?",
+answers:["Claudio","Nerón","Domiciano","Augusto"],
+correct:1,
+explanation:"Pablo llegó a Roma durante el gobierno del emperador Nerón.",
+reference:"Hechos 25:10-12; 28:16"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Quién acompañó a Pablo y fue mencionado como su compañero de prisión?",
+answers:["Epafrodito","Silas","Marcos","Apolos"],
+correct:0,
+explanation:"Epafrodito compartió el servicio y las dificultades de Pablo.",
+reference:"Filipenses 2:25"
+},
+{
+category:"Nuevo Testamento", level:"Difícil",
+question:"¿Qué iglesia recibió la carta que menciona a Himeneo y Alejandro?",
+answers:["Éfeso","Corinto","Filipos","Tesalónica"],
+correct:0,
+explanation:"Pablo menciona a Himeneo y Alejandro en su primera carta a Timoteo, relacionada con la iglesia de Éfeso.",
+reference:"1 Timoteo 1:3, 19-20"
+}
+];
+  const preguntasJesusFacil = [
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿En qué ciudad creció Jesús?",
+answers:["Belén","Nazaret","Jerusalén","Jericó"],
+correct:1,
+explanation:"Jesús creció en Nazaret, en Galilea.",
+reference:"Lucas 2:39-40"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Quién anunció a María que tendría un hijo llamado Jesús?",
+answers:["El ángel Gabriel","El ángel Miguel","Juan el Bautista","El profeta Isaías"],
+correct:0,
+explanation:"El ángel Gabriel anunció a María el nacimiento de Jesús.",
+reference:"Lucas 1:26-31"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Dónde fue colocado Jesús después de nacer?",
+answers:["En una cuna de oro","En un pesebre","En un palacio","En una barca"],
+correct:1,
+explanation:"María acostó a Jesús en un pesebre porque no había lugar para ellos.",
+reference:"Lucas 2:7"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Quiénes recibieron el anuncio del nacimiento de Jesús mientras cuidaban sus ovejas?",
+answers:["Los soldados","Los pastores","Los pescadores","Los sacerdotes"],
+correct:1,
+explanation:"Un ángel anunció a los pastores que había nacido el Salvador.",
+reference:"Lucas 2:8-11"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Qué llevaron los sabios de Oriente como regalos para Jesús?",
+answers:["Pan, agua y ropa","Oro, incienso y mirra","Plata, trigo y aceite","Joyas, telas y vino"],
+correct:1,
+explanation:"Los sabios ofrecieron oro, incienso y mirra.",
+reference:"Mateo 2:11"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿En qué río fue bautizado Jesús?",
+answers:["Nilo","Jordán","Éufrates","Tigris"],
+correct:1,
+explanation:"Jesús fue bautizado por Juan en el río Jordán.",
+reference:"Mateo 3:13"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Cuántos días estuvo Jesús en el desierto antes de comenzar su ministerio?",
+answers:["7","12","30","40"],
+correct:3,
+explanation:"Jesús ayunó durante cuarenta días y cuarenta noches.",
+reference:"Mateo 4:1-2"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Cuál fue el primer milagro de Jesús según el Evangelio de Juan?",
+answers:["Sanar a un paralítico","Convertir agua en vino","Multiplicar panes","Caminar sobre el agua"],
+correct:1,
+explanation:"Jesús convirtió el agua en vino durante una boda en Caná.",
+reference:"Juan 2:1-11"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Qué utilizó Jesús para alimentar a cinco mil hombres?",
+answers:["Cinco panes y dos peces","Siete panes y tres peces","Doce panes","Una canasta de frutas"],
+correct:0,
+explanation:"Jesús multiplicó cinco panes y dos peces para alimentar a la multitud.",
+reference:"Mateo 14:17-21"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Qué hizo Jesús cuando sus discípulos tuvieron miedo durante una tormenta?",
+answers:["Abandonó la barca","Calmó el viento y el mar","Se escondió","Envió a los discípulos a nadar"],
+correct:1,
+explanation:"Jesús reprendió los vientos y el mar, y llegó una gran calma.",
+reference:"Mateo 8:23-27"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Qué oración enseñó Jesús a sus discípulos?",
+answers:["El Shemá","El Padre nuestro","El cántico de Moisés","La oración de Ana"],
+correct:1,
+explanation:"Jesús enseñó a sus discípulos a orar con el Padre nuestro.",
+reference:"Mateo 6:9-13"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Cómo se llamaba el hombre pequeño que subió a un árbol para ver a Jesús?",
+answers:["Bartimeo","Zaqueo","Nicodemo","Lázaro"],
+correct:1,
+explanation:"Zaqueo subió a un sicómoro porque quería ver a Jesús.",
+reference:"Lucas 19:1-4"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Qué hizo Jesús con Lázaro después de que llevaba cuatro días muerto?",
+answers:["Lo dejó en la tumba","Lo resucitó","Lo llevó a Galilea","Lo convirtió en discípulo"],
+correct:1,
+explanation:"Jesús llamó a Lázaro fuera del sepulcro y él salió.",
+reference:"Juan 11:38-44"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Qué animal montó Jesús cuando entró en Jerusalén?",
+answers:["Un caballo","Un camello","Un pollino","Un buey"],
+correct:2,
+explanation:"Jesús entró en Jerusalén montado en un pollino.",
+reference:"Juan 12:14-15"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Qué hizo Jesús con los niños que se acercaban a él?",
+answers:["Los rechazó","Los bendijo y recibió","Los envió lejos","Les pidió dinero"],
+correct:1,
+explanation:"Jesús recibió a los niños y enseñó que el reino de Dios pertenece a quienes son como ellos.",
+reference:"Marcos 10:13-16"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Qué discípulo negó a Jesús tres veces?",
+answers:["Juan","Pedro","Tomás","Andrés"],
+correct:1,
+explanation:"Pedro negó conocer a Jesús tres veces antes del canto del gallo.",
+reference:"Lucas 22:54-62"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Qué discípulo entregó a Jesús por treinta piezas de plata?",
+answers:["Judas Iscariote","Felipe","Mateo","Santiago"],
+correct:0,
+explanation:"Judas Iscariote acordó entregar a Jesús por treinta piezas de plata.",
+reference:"Mateo 26:14-16"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿En qué lugar fue crucificado Jesús?",
+answers:["Monte Sinaí","Gólgota","Monte Carmelo","Monte de los Olivos"],
+correct:1,
+explanation:"Jesús fue crucificado en un lugar llamado Gólgota.",
+reference:"Juan 19:17-18"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Quién encontró la tumba de Jesús vacía el primer día de la semana?",
+answers:["María Magdalena y otras mujeres","Pilato","Herodes","Los soldados romanos"],
+correct:0,
+explanation:"María Magdalena y otras mujeres fueron al sepulcro y lo encontraron vacío.",
+reference:"Lucas 24:1-3; Juan 20:1"
+},
+{
+category:"La vida de Jesús", level:"Fácil",
+question:"¿Qué hizo Jesús después de resucitar, según el relato de Hechos?",
+answers:["Se quedó en Belén","Ascendió al cielo","Se convirtió en rey de Roma","Regresó a Egipto"],
+correct:1,
+explanation:"Después de hablar con sus discípulos, Jesús fue elevado al cielo.",
+reference:"Hechos 1:3-9"
+}
+];
+  const preguntasJesusIntermedio = [
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué hombre ayudó a Jesús a llevar la cruz?",
+answers:["José de Arimatea","Simón de Cirene","Nicodemo","Bartimeo"],
+correct:1,
+explanation:"Simón de Cirene fue obligado a llevar la cruz detrás de Jesús.",
+reference:"Lucas 23:26"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué discípulo le preguntó a Jesús cuántas veces debía perdonar a su hermano?",
+answers:["Pedro","Juan","Tomás","Andrés"],
+correct:0,
+explanation:"Pedro preguntó si debía perdonar hasta siete veces, y Jesús respondió hablando de perdonar setenta veces siete.",
+reference:"Mateo 18:21-22"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué parábola habla de un hombre que ayudó a un viajero herido?",
+answers:["El sembrador","El buen samaritano","Los talentos","La oveja perdida"],
+correct:1,
+explanation:"El samaritano mostró compasión y ayudó al hombre herido.",
+reference:"Lucas 10:30-37"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué hizo Jesús cuando encontró vendedores en el templo?",
+answers:["Se unió a ellos","Expulsó a los vendedores","Ignoró la situación","Cerró el templo"],
+correct:1,
+explanation:"Jesús expulsó a quienes compraban y vendían, defendiendo el propósito de la casa de Dios.",
+reference:"Mateo 21:12-13"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué mujer tocó el manto de Jesús y fue sanada de una hemorragia?",
+answers:["Marta","Una mujer que llevaba doce años enferma","María Magdalena","La suegra de Pedro"],
+correct:1,
+explanation:"La mujer tocó el manto de Jesús con fe y recibió sanidad.",
+reference:"Marcos 5:25-34"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué discípulos acompañaron a Jesús en la transfiguración?",
+answers:["Pedro, Santiago y Juan","Andrés, Felipe y Tomás","Mateo, Judas y Simón","Pedro, Andrés y Mateo"],
+correct:0,
+explanation:"Pedro, Santiago y Juan fueron testigos de la transfiguración.",
+reference:"Mateo 17:1-2"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué profetas aparecieron hablando con Jesús durante la transfiguración?",
+answers:["Isaías y Jeremías","Moisés y Elías","Eliseo y Samuel","Daniel y Ezequiel"],
+correct:1,
+explanation:"Moisés y Elías aparecieron hablando con Jesús.",
+reference:"Mateo 17:3"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué hizo Jesús cuando sus discípulos discutían sobre quién era el mayor?",
+answers:["Los felicitó","Les enseñó a ser servidores","Eligió un nuevo líder","Los despidió"],
+correct:1,
+explanation:"Jesús enseñó que el mayor debía hacerse servidor de los demás.",
+reference:"Marcos 9:33-35"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué hombre rico visitó a Jesús de noche para hablar con él?",
+answers:["Zaqueo","Nicodemo","José de Arimatea","Jairo"],
+correct:1,
+explanation:"Nicodemo era fariseo y dirigente de los judíos; visitó a Jesús de noche.",
+reference:"Juan 3:1-2"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué respondió Jesús cuando le preguntaron cuál era el mandamiento más importante?",
+answers:["Construir un templo","Amar a Dios y al prójimo","Ayunar todos los días","Dar todas las riquezas"],
+correct:1,
+explanation:"Jesús resumió la Ley en amar a Dios y amar al prójimo.",
+reference:"Mateo 22:36-40"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué discípulo pidió caminar sobre el agua hacia Jesús?",
+answers:["Pedro","Juan","Santiago","Felipe"],
+correct:0,
+explanation:"Pedro pidió que Jesús lo llamara y comenzó a caminar sobre el agua.",
+reference:"Mateo 14:28-29"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué hizo Jesús con la hija de Jairo?",
+answers:["La envió a otra ciudad","La resucitó","La bautizó","La llevó al templo"],
+correct:1,
+explanation:"Jesús tomó a la niña de la mano y ella se levantó.",
+reference:"Marcos 5:35-42"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué parábola enseña sobre las diez jóvenes que esperaban al esposo?",
+answers:["La moneda perdida","Las diez vírgenes","El hijo pródigo","El rico insensato"],
+correct:1,
+explanation:"La parábola enseña a estar preparados y vigilantes.",
+reference:"Mateo 25:1-13"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué discípulo preguntó a Jesús cómo conocer el camino al Padre?",
+answers:["Tomás","Pedro","Judas Iscariote","Andrés"],
+correct:0,
+explanation:"Tomás preguntó cómo podían conocer el camino, y Jesús respondió que él era el camino, la verdad y la vida.",
+reference:"Juan 14:5-6"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué hizo Jesús antes de resucitar a Lázaro?",
+answers:["Se fue de Betania","Oró al Padre","Llamó a los sacerdotes","Pidió que todos salieran de la ciudad"],
+correct:1,
+explanation:"Jesús oró al Padre antes de llamar a Lázaro fuera del sepulcro.",
+reference:"Juan 11:41-43"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué señal pidió Judas para identificar a Jesús durante su arresto?",
+answers:["Una lámpara","Un beso","Una túnica especial","Una palabra secreta"],
+correct:1,
+explanation:"Judas identificó a Jesús con un beso.",
+reference:"Mateo 26:47-49"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué le dijo Jesús a la mujer samaritana acerca del agua que él podía dar?",
+answers:["Que era agua del pozo","Que se convertiría en una fuente de vida eterna","Que solo servía para lavarse","Que estaba reservada para los sacerdotes"],
+correct:1,
+explanation:"Jesús habló del agua viva que lleva a la vida eterna.",
+reference:"Juan 4:13-14"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué hizo Jesús cuando encontró a un hombre ciego de nacimiento?",
+answers:["Lo ignoró","Le devolvió la vista","Lo envió a Jerusalén","Le pidió que regresara otro día"],
+correct:1,
+explanation:"Jesús sanó al hombre ciego de nacimiento.",
+reference:"Juan 9:1-7"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué pidió Jesús a sus discípulos durante la última cena?",
+answers:["Que construyeran una casa","Que recordaran su sacrificio","Que dejaran de predicar","Que regresaran a Galilea"],
+correct:1,
+explanation:"Jesús instituyó la cena como memorial de su sacrificio.",
+reference:"Lucas 22:19-20"
+},
+{
+category:"La vida de Jesús", level:"Intermedio",
+question:"¿Qué discípulo cortó la oreja del siervo del sumo sacerdote cuando arrestaron a Jesús?",
+answers:["Pedro","Juan","Santiago","Andrés"],
+correct:0,
+explanation:"Pedro sacó una espada e hirió al siervo, pero Jesús detuvo la violencia y sanó al hombre.",
+reference:"Juan 18:10; Lucas 22:50-51"
+}
+];
+  const preguntasJesusDificil = [
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué profeta citó Jesús cuando habló de la señal de Jonás?",
+answers:["Isaías","Jonás","Jeremías","Oseas"],
+correct:1,
+explanation:"Jesús comparó su permanencia en el sepulcro con los tres días y noches de Jonás en el gran pez.",
+reference:"Mateo 12:39-40"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿En qué ciudad se encontraba Jesús cuando sanó al hijo de un funcionario real?",
+answers:["Jerusalén","Caná de Galilea","Betania","Jericó"],
+correct:1,
+explanation:"Jesús estaba en Caná cuando el funcionario le pidió sanar a su hijo.",
+reference:"Juan 4:46-54"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué respondió Jesús cuando le preguntaron si era lícito pagar tributo al César?",
+answers:["Que no debían pagar nada","Dad al César lo que es del César y a Dios lo que es de Dios","Que solo los sacerdotes podían pagar","Que debían abandonar Roma"],
+correct:1,
+explanation:"Jesús distinguió las obligaciones civiles de las que corresponden a Dios.",
+reference:"Mateo 22:17-21"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué discípulo reconoció a Jesús como el Santo de Dios?",
+answers:["Pedro","Tomás","Judas","Felipe"],
+correct:0,
+explanation:"Pedro declaró que Jesús tenía palabras de vida eterna y era el Santo de Dios.",
+reference:"Juan 6:68-69"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué nombre tenía el siervo del sumo sacerdote cuya oreja fue cortada durante el arresto de Jesús?",
+answers:["Malco","Bartimeo","Cleofas","Jairo"],
+correct:0,
+explanation:"Juan identifica como Malco al siervo cuya oreja Pedro cortó.",
+reference:"Juan 18:10"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué dijo Jesús desde la cruz al entregar su espíritu según el Evangelio de Juan?",
+answers:["Padre, en tus manos encomiendo mi espíritu","Consumado es","Dios mío, ¿por qué me has desamparado?","Tengo sed"],
+correct:1,
+explanation:"Juan relata que Jesús dijo «Consumado es» antes de entregar su espíritu.",
+reference:"Juan 19:30"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué discípulo estaba presente junto a María al pie de la cruz, según Juan?",
+answers:["Pedro","El discípulo amado","Tomás","Andrés"],
+correct:1,
+explanation:"Jesús confió el cuidado de su madre al discípulo amado.",
+reference:"Juan 19:25-27"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué dos discípulos encontraron a Jesús en el camino a Emaús después de su resurrección?",
+answers:["Pedro y Juan","Cleofas y otro discípulo","Santiago y Andrés","Felipe y Tomás"],
+correct:1,
+explanation:"Cleofas y otro discípulo conversaron con Jesús sin reconocerlo al principio.",
+reference:"Lucas 24:13-18"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué le dijo Jesús a Marta sobre la resurrección antes de llamar a Lázaro?",
+answers:["Yo soy la resurrección y la vida","Tu hermano ya no volverá","La muerte tiene la última palabra","Debes esperar siete días"],
+correct:0,
+explanation:"Jesús declaró que él es la resurrección y la vida.",
+reference:"Juan 11:25-26"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué fiesta judía se acercaba cuando Jesús alimentó a los cinco mil según Juan?",
+answers:["Pentecostés","La Pascua","La fiesta de los Tabernáculos","La fiesta de las Trompetas"],
+correct:1,
+explanation:"Juan señala que estaba cerca la Pascua, la fiesta de los judíos.",
+reference:"Juan 6:4"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué respondió Jesús cuando Pilato le preguntó si era rey?",
+answers:["Mi reino no es de este mundo","Soy rey de Roma","No tengo reino","Mi reino está en Jerusalén"],
+correct:0,
+explanation:"Jesús explicó que su reino no pertenecía a este mundo.",
+reference:"Juan 18:36"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué discípulo pidió ver las marcas de los clavos para creer en la resurrección?",
+answers:["Felipe","Tomás","Mateo","Bartolomé"],
+correct:1,
+explanation:"Tomás expresó sus dudas y después creyó al ver a Jesús.",
+reference:"Juan 20:24-29"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿En qué monte pronunció Jesús el conocido Sermón del Monte?",
+answers:["Monte Sinaí","El monte de Galilea","Monte Carmelo","Monte de los Olivos"],
+correct:1,
+explanation:"Mateo relata que Jesús subió a un monte y enseñó a sus discípulos.",
+reference:"Mateo 5:1"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué parábola habla de diez minas entregadas a diez siervos?",
+answers:["Los talentos","Las diez minas","El sembrador","El buen samaritano"],
+correct:1,
+explanation:"Jesús contó la parábola de las minas para enseñar sobre la responsabilidad y la fidelidad.",
+reference:"Lucas 19:11-27"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué le dijo Jesús a Pedro después de preguntarle tres veces si lo amaba?",
+answers:["Apacienta mis ovejas","Regresa a Galilea","Construye un templo","Busca a Judas"],
+correct:0,
+explanation:"Jesús encargó a Pedro cuidar de sus ovejas, restaurándolo después de sus negaciones.",
+reference:"Juan 21:15-17"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué profecía se cumplió cuando Jesús entró en Jerusalén montado en un pollino?",
+answers:["La profecía de Zacarías","La profecía de Amós","La profecía de Jeremías","La profecía de Daniel"],
+correct:0,
+explanation:"Zacarías anunció la llegada del rey justo y humilde montado en un asno.",
+reference:"Zacarías 9:9; Juan 12:14-15"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué mujer ungió los pies de Jesús y los secó con sus cabellos en Betania?",
+answers:["Marta","María de Betania","María Magdalena","Juana"],
+correct:1,
+explanation:"María tomó perfume costoso y ungió los pies de Jesús.",
+reference:"Juan 12:1-3"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué dijo Jesús sobre el templo que sería levantado en tres días?",
+answers:["Que hablaba del templo de Jerusalén","Que hablaba de su cuerpo","Que hablaba de una nueva ciudad","Que hablaba del templo de Samaria"],
+correct:1,
+explanation:"Jesús hablaba del templo de su cuerpo y de su resurrección.",
+reference:"Juan 2:19-21"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué discípulo preguntó si Jesús lavaría también sus manos y su cabeza durante el lavamiento de pies?",
+answers:["Pedro","Juan","Tomás","Judas"],
+correct:0,
+explanation:"Pedro primero se resistió y después pidió que Jesús lo lavara por completo.",
+reference:"Juan 13:6-10"
+},
+{
+category:"La vida de Jesús", level:"Difícil",
+question:"¿Qué mandato dio Jesús a sus discípulos antes de ascender al cielo según Mateo?",
+answers:["Construir un templo en Jerusalén","Hacer discípulos de todas las naciones","Regresar a Egipto","Elegir un nuevo emperador"],
+correct:1,
+explanation:"Jesús encargó a sus discípulos llevar su enseñanza a todas las naciones.",
+reference:"Mateo 28:18-20"
+}
+];
+  const questions = [
+  ...preguntasPersonajesFacil,
+  ...preguntasPersonajesIntermedio,
+  ...preguntasPersonajesDificil,
+  ...preguntasAntiguoFacil,
+  ...preguntasAntiguoIntermedio,
+  ...preguntasAntiguoDificil,
+  ...preguntasNuevoFacil,
+  ...preguntasNuevoIntermedio,
+  ...preguntasNuevoDificil,
+  ...preguntasJesusFacil,
+  ...preguntasJesusIntermedio,
+  ...preguntasJesusDificil
 ];
 
 function startGame() {
@@ -587,14 +2400,21 @@ function startGame() {
     (category === "Conocimiento general" || q.category === category)
   );
 
-  if (window.gameQuestions.length === 0) {
+ if (window.gameQuestions.length < 20) {
     document.getElementById("setupNotice").textContent =
       "No hay preguntas disponibles para esta selección.";
     return;
   }
 
   // Mezclar las preguntas para cambiar el orden en cada partida.
-  window.gameQuestions.sort(() => Math.random() - 0.5);
+const shuffled = [...window.gameQuestions];
+
+for (let i = shuffled.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+}
+
+window.gameQuestions = shuffled.slice(0, 20);
 
   currentQuestion = 0;
   score = 0;
@@ -671,19 +2491,21 @@ function checkAnswer(index) {
     button.disabled = true;
   });
 
-  if (index === q.correct) {
-    const earned = seconds * 10;
-    score += earned;
+if (index === q.correct) {
+  const earned = seconds * 10;
+  score += earned;
 
-    document.getElementById("feedback").textContent =
-      "✨ ¡CORRECTO! +" + earned + " puntos. " + q.explanation;
-  } else {
-    document.getElementById("feedback").textContent =
-      "💫 " +
-      (index === -1 ? "¡Se acabó el tiempo!" : "¡Inténtalo en la próxima!") +
-      " La respuesta correcta era: " + q.answers[q.correct] +
-      ". " + q.explanation;
-  }
+  document.getElementById("feedback").textContent =
+    "✨ ¡CORRECTO! +" + earned + " puntos. " +
+    q.explanation + " 📖 Referencia: " + (q.reference || "No disponible");
+} else {
+  document.getElementById("feedback").textContent =
+    "💫 " +
+    (index === -1 ? "¡Se acabó el tiempo!" : "¡Inténtalo en la próxima!") +
+    " La respuesta correcta era: " + q.answers[q.correct] +
+    ". " + q.explanation +
+    " 📖 Referencia: " + (q.reference || "No disponible");
+}
 
   document.getElementById("score").textContent =
     "⭐ Puntos: " + score;
