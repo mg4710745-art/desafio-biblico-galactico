@@ -315,6 +315,7 @@ Héroe seleccionado: David
 <h2>🌌 DESAFÍO BÍBLICO</h2>
 
 <p id="playerInfo"></p>
+<p id="categoryInfo"></p>
 <p id="questionNumber"></p>
 
 <h3 id="questionText"></h3>
@@ -370,82 +371,230 @@ document.getElementById("start").addEventListener("click", () => {
 });
 
 const questions = [
+
+/* PERSONAJES BÍBLICOS */
+
 {
+category:"Personajes bíblicos",
 level:"Fácil",
-question:"¿Quién construyó el arca?",
-answers:["Moisés","Noé","David","Pablo"],
-correct:1,
-explanation:"Noé construyó el arca siguiendo las instrucciones de Dios."
-},
-{
-level:"Fácil",
-question:"¿Quién venció a Goliat?",
+question:"¿Quién venció al gigante Goliat?",
 answers:["David","Saúl","Salomón","Pedro"],
 correct:0,
 explanation:"David venció a Goliat confiando en Dios."
 },
 {
+category:"Personajes bíblicos",
 level:"Fácil",
-question:"¿Dónde nació Jesús?",
-answers:["Nazaret","Jerusalén","Belén","Egipto"],
+question:"¿Qué mujer llegó a ser reina y ayudó a salvar a su pueblo?",
+answers:["Rut","Ester","Marta","Rebeca"],
+correct:1,
+explanation:"La reina Ester intercedió por su pueblo."
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién interpretó los sueños del faraón en Egipto?",
+answers:["Daniel","José","Samuel","Aarón"],
+correct:1,
+explanation:"José interpretó los sueños del faraón."
+},
+{
+category:"Personajes bíblicos",
+level:"Intermedio",
+question:"¿Quién sucedió a Moisés como líder de Israel?",
+answers:["Caleb","Josué","Gedeón","Aarón"],
+correct:1,
+explanation:"Josué fue elegido para guiar al pueblo después de Moisés."
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Cómo se llamaba la madre del profeta Samuel?",
+answers:["Sara","Ana","Raquel","Débora"],
+correct:1,
+explanation:"Ana oró a Dios y fue la madre de Samuel."
+},
+{
+category:"Personajes bíblicos",
+level:"Difícil",
+question:"¿Qué mujer fue jueza y profetisa en Israel?",
+answers:["Miriam","Abigail","Débora","Noemí"],
+correct:2,
+explanation:"Débora fue jueza y profetisa de Israel."
+},
+
+/* ANTIGUO TESTAMENTO */
+
+{
+category:"Antiguo Testamento",
+level:"Fácil",
+question:"¿Quién construyó el arca?",
+answers:["Moisés","Noé","Abraham","Isaac"],
+correct:1,
+explanation:"Noé construyó el arca siguiendo las instrucciones de Dios."
+},
+{
+category:"Antiguo Testamento",
+level:"Fácil",
+question:"¿Quién recibió las tablas de los Diez Mandamientos?",
+answers:["David","Josué","Moisés","Elías"],
+correct:2,
+explanation:"Moisés recibió las tablas de la ley en el monte Sinaí."
+},
+{
+category:"Antiguo Testamento",
+level:"Intermedio",
+question:"¿Qué ciudad cayó después de que Israel marchara alrededor de sus murallas?",
+answers:["Jerusalén","Jericó","Babilonia","Nínive"],
+correct:1,
+explanation:"Las murallas de Jericó cayeron después de las instrucciones de Dios."
+},
+{
+category:"Antiguo Testamento",
+level:"Intermedio",
+question:"¿Qué joven fue vendido por sus hermanos y llevado a Egipto?",
+answers:["Isaac","Benjamín","José","Esaú"],
+correct:2,
+explanation:"Los hermanos de José lo vendieron y fue llevado a Egipto."
+},
+{
+category:"Antiguo Testamento",
+level:"Difícil",
+question:"¿Qué rey pidió sabiduría a Dios?",
+answers:["Saúl","Salomón","Acab","Ezequías"],
+correct:1,
+explanation:"Salomón pidió sabiduría para gobernar al pueblo."
+},
+{
+category:"Antiguo Testamento",
+level:"Difícil",
+question:"¿Quién dirigió la reconstrucción de los muros de Jerusalén?",
+answers:["Esdras","Nehemías","Isaías","Jeremías"],
+correct:1,
+explanation:"Nehemías dirigió la reconstrucción de los muros de Jerusalén."
+},
+
+/* NUEVO TESTAMENTO */
+
+{
+category:"Nuevo Testamento",
+level:"Fácil",
+question:"¿Quién bautizó a Jesús?",
+answers:["Pedro","Juan el Bautista","Pablo","Andrés"],
+correct:1,
+explanation:"Juan el Bautista bautizó a Jesús en el río Jordán."
+},
+{
+category:"Nuevo Testamento",
+level:"Fácil",
+question:"¿Quién entregó a Jesús a sus enemigos?",
+answers:["Tomás","Judas Iscariote","Mateo","Felipe"],
+correct:1,
+explanation:"Judas Iscariote entregó a Jesús."
+},
+{
+category:"Nuevo Testamento",
+level:"Intermedio",
+question:"¿Qué apóstol escribió muchas cartas a las primeras iglesias?",
+answers:["Pablo","Andrés","Judas","Bartolomé"],
+correct:0,
+explanation:"Pablo escribió numerosas cartas que forman parte del Nuevo Testamento."
+},
+{
+category:"Nuevo Testamento",
+level:"Intermedio",
+question:"¿En qué isla recibió Juan la revelación del Apocalipsis?",
+answers:["Creta","Malta","Patmos","Chipre"],
+correct:2,
+explanation:"Juan recibió la revelación en la isla de Patmos."
+},
+{
+category:"Nuevo Testamento",
+level:"Difícil",
+question:"¿Quién es conocido como el primer mártir cristiano?",
+answers:["Esteban","Bernabé","Timoteo","Felipe"],
+correct:0,
+explanation:"Esteban fue el primer mártir cristiano mencionado en Hechos."
+},
+{
+category:"Nuevo Testamento",
+level:"Difícil",
+question:"¿Qué apóstol también era llamado Dídimo?",
+answers:["Pedro","Juan","Tomás","Mateo"],
+correct:2,
+explanation:"Tomás era llamado Dídimo, que significa gemelo."
+},
+
+/* LA VIDA DE JESÚS */
+
+{
+category:"La vida de Jesús",
+level:"Fácil",
+question:"¿En qué ciudad nació Jesús?",
+answers:["Nazaret","Jerusalén","Belén","Capernaúm"],
 correct:2,
 explanation:"Jesús nació en Belén."
 },
 {
+category:"La vida de Jesús",
+level:"Fácil",
+question:"¿Cuál fue el primer milagro de Jesús según el Evangelio de Juan?",
+answers:["Sanar a un ciego","Caminar sobre el agua","Convertir agua en vino","Alimentar a cinco mil"],
+correct:2,
+explanation:"Jesús convirtió el agua en vino durante una boda en Caná."
+},
+{
+category:"La vida de Jesús",
 level:"Intermedio",
-question:"¿Quién interpretó los sueños del faraón?",
-answers:["Daniel","José","Aarón","Samuel"],
+question:"¿Cuántos días ayunó Jesús en el desierto?",
+answers:["7 días","12 días","30 días","40 días"],
+correct:3,
+explanation:"Jesús ayunó durante cuarenta días y cuarenta noches."
+},
+{
+category:"La vida de Jesús",
+level:"Intermedio",
+question:"¿Qué parábola cuenta la historia de un hijo que regresa a casa?",
+answers:["El sembrador","El hijo pródigo","La oveja perdida","Los talentos"],
 correct:1,
-explanation:"José interpretó los sueños del faraón en Egipto."
+explanation:"La parábola del hijo pródigo enseña sobre el perdón y la misericordia."
 },
 {
-level:"Intermedio",
-question:"¿Qué reina ayudó a su pueblo?",
-answers:["Rut","María","Ester","Débora"],
-correct:2,
-explanation:"Ester intercedió por su pueblo ante el rey."
-},
-{
-level:"Intermedio",
-question:"¿Quién fue tragado por un gran pez?",
-answers:["Jonás","Elías","Isaías","Pedro"],
-correct:0,
-explanation:"Jonás estuvo dentro de un gran pez."
-},
-{
+category:"La vida de Jesús",
 level:"Difícil",
-question:"¿Quién fue el primer rey de Israel?",
-answers:["David","Salomón","Saúl","Josías"],
-correct:2,
-explanation:"Saúl fue el primer rey de Israel."
-},
-{
-level:"Difícil",
-question:"¿En qué isla recibió Juan la revelación del Apocalipsis?",
-answers:["Creta","Patmos","Chipre","Malta"],
+question:"¿Qué discípulo negó conocer a Jesús tres veces?",
+answers:["Juan","Pedro","Tomás","Andrés"],
 correct:1,
-explanation:"Juan recibió la revelación en la isla de Patmos."
+explanation:"Pedro negó a Jesús tres veces antes de que cantara el gallo."
 },
 {
+category:"La vida de Jesús",
 level:"Difícil",
-question:"¿Quién sucedió a Moisés como líder de Israel?",
-answers:["Caleb","Aarón","Josué","Gedeón"],
-correct:2,
-explanation:"Josué sucedió a Moisés."
-},
-{
-level:"Difícil",
-question:"¿Quién era la madre de Samuel?",
-answers:["Ana","Sara","Rebeca","Raquel"],
-correct:0,
-explanation:"Ana fue la madre de Samuel."
+question:"¿Quién pidió a Pilato el cuerpo de Jesús para sepultarlo?",
+answers:["Nicodemo","José de Arimatea","Zaqueo","Simón de Cirene"],
+correct:1,
+explanation:"José de Arimatea pidió a Pilato el cuerpo de Jesús."
 }
+
 ];
 
 function startGame() {
   const level = document.getElementById("difficulty").value;
+  const category = document.getElementById("category").value;
 
-  window.gameQuestions = questions.filter(q => q.level === level);
+  window.gameQuestions = questions.filter(q =>
+    q.level === level &&
+    (category === "Conocimiento general" || q.category === category)
+  );
+
+  if (window.gameQuestions.length === 0) {
+    document.getElementById("setupNotice").textContent =
+      "No hay preguntas disponibles para esta selección.";
+    return;
+  }
+
+  // Mezclar las preguntas para cambiar el orden en cada partida.
+  window.gameQuestions.sort(() => Math.random() - 0.5);
 
   currentQuestion = 0;
   score = 0;
@@ -455,6 +604,9 @@ function startGame() {
 
   document.getElementById("playerInfo").textContent =
     playerNickname + " · Héroe: " + selected;
+
+  document.getElementById("categoryInfo").textContent =
+    "Categoría: " + category + " · Dificultad: " + level;
 
   showQuestion();
 
@@ -550,13 +702,27 @@ function checkAnswer(index) {
 function finishGame() {
   clearInterval(timerInterval);
 
-  document.getElementById("game").innerHTML =
-    "<h2>🏆 ¡MISIÓN COMPLETADA!</h2>" +
-    "<p>¡Buen trabajo, " + playerNickname + "!</p>" +
-    "<p>Tu puntuación final:</p>" +
-    "<h1>" + score + " puntos</h1>" +
-    "<button class='start' onclick='location.reload()'>" +
-    "VOLVER A JUGAR</button>";
+  const game = document.getElementById("game");
+  game.innerHTML = "";
+
+  const title = document.createElement("h2");
+  title.textContent = "🏆 ¡MISIÓN COMPLETADA!";
+
+  const greeting = document.createElement("p");
+  greeting.textContent = "¡Buen trabajo, " + playerNickname + "!";
+
+  const label = document.createElement("p");
+  label.textContent = "Tu puntuación final:";
+
+  const result = document.createElement("h1");
+  result.textContent = score + " puntos";
+
+  const restart = document.createElement("button");
+  restart.className = "start";
+  restart.textContent = "VOLVER A JUGAR";
+  restart.onclick = () => location.reload();
+
+  game.append(title, greeting, label, result, restart);
 }
 
 document.getElementById("mission").addEventListener("click", () => {
@@ -575,3 +741,4 @@ document.getElementById("mission").addEventListener("click", () => {
 
 </body>
 </html>
+
