@@ -3,13 +3,11 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Desafío Bíblico Galáctico</title>
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -37,15 +35,12 @@ header {
   letter-spacing: 2px;
 }
 
-.status {
-  color: #bdc8ed;
-  font-size: 12px;
-}
+.status { color: #bdc8ed; font-size: 12px; }
 
 main {
   width: min(1000px, 92%);
   margin: auto;
-  padding: 48px 0;
+  padding: 40px 0;
 }
 
 .eyebrow {
@@ -69,20 +64,16 @@ h1 {
   color: #c0c9ec;
   line-height: 1.6;
   max-width: 620px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-.panel {
-  margin: 30px auto;
+.panel, #setup, #game {
+  margin: 25px auto;
   padding: 25px;
-  border: 1px solid #8d8bff66;
+  border: 1px solid #65eaff66;
   border-radius: 22px;
   background: #111630ef;
-  box-shadow: 0 0 40px #7755ff26;
-}
-
-h2 {
-  margin: 0 0 8px;
+  box-shadow: 0 0 30px #7755ff26;
 }
 
 .grid {
@@ -114,68 +105,27 @@ h2 {
   background: linear-gradient(145deg, #174d69, #24204e);
 }
 
-/* Muestra el retrato completo, sin cortarlo */
 .hero img {
   display: block;
   width: 100%;
-  height: 190px;
+  height: 180px;
   object-fit: contain;
-  object-position: center;
   border-radius: 10px;
-  background: linear-gradient(145deg, #20264b, #10162f);
+  background: #20264b;
   padding: 4px;
 }
 
 .hero strong {
   display: block;
   padding-top: 9px;
-  font-size: 15px;
 }
 
 .hero small {
   display: block;
   color: #c5d0f4;
-  font-size: 11px;
   margin-top: 4px;
 }
 
-.message {
-  min-height: 22px;
-  color: #65eaff;
-  font-size: 14px;
-  margin: 12px 0;
-}
-#setup {
-  margin-top: 25px;
-  padding: 25px;
-  border: 1px solid #65eaff;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #17234a, #11152d);
-  box-shadow: 0 0 25px #65eaff33;
-}
-
-#setup label {
-  display: block;
-  margin: 18px 0 8px;
-  color: #65eaff;
-  font-weight: bold;
-}
-
-#setup input,
-#setup select {
-  width: 100%;
-  max-width: 400px;
-  padding: 13px;
-  border-radius: 10px;
-  border: 1px solid #65eaff;
-  background: #080d24;
-  color: white;
-  font-size: 16px;
-}
-
-#setup h3 {
-  color: #ff82d9;
-}
 .start {
   border: 0;
   border-radius: 13px;
@@ -187,6 +137,48 @@ h2 {
   cursor: pointer;
 }
 
+.message {
+  min-height: 22px;
+  color: #65eaff;
+  margin: 12px 0;
+}
+
+#setup label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #65eaff;
+  font-weight: bold;
+}
+
+#setup input, #setup select {
+  width: 100%;
+  max-width: 400px;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #65eaff;
+  background: #080d24;
+  color: white;
+  font-size: 16px;
+}
+
+#setup h3 { color: #ff82d9; }
+
+#answers {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#answers button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+#answers button:disabled {
+  opacity: .6;
+  cursor: default;
+}
+
 footer {
   padding: 22px;
   color: #98a5ca;
@@ -194,21 +186,10 @@ footer {
 }
 
 @media(max-width: 650px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .hero img {
-    height: 170px;
-  }
-
-  main {
-    padding: 32px 0;
-  }
-
-  .panel {
-    padding: 17px;
-  }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero img { height: 160px; }
+  main { padding: 30px 0; }
+  .panel, #setup, #game { padding: 17px; }
 }
 </style>
 </head>
@@ -222,110 +203,150 @@ footer {
 
 <main>
 
-  <div class="eyebrow">
-    UNA AVENTURA DE FE Y CONOCIMIENTO
-  </div>
+<div class="eyebrow">UNA AVENTURA DE FE Y CONOCIMIENTO</div>
 
-  <h1>DESAFÍO<br>BÍBLICO GALÁCTICO</h1>
+<h1>DESAFÍO<br>BÍBLICO GALÁCTICO</h1>
 
-  <p class="lead">
-    Personajes que hicieron historia con Dios.
-    Elige tu héroe y prepárate para una aventura
-    de conocimiento bíblico.
-  </p>
+<p class="lead">
+Personajes que hicieron historia con Dios.
+Elige tu héroe y prepárate para una aventura.
+</p>
 
-  <section class="panel">
+<section class="panel">
 
-    <h2>✧ ELIGE TU HÉROE ✧</h2>
+<h2>✧ ELIGE TU HÉROE ✧</h2>
 
-    <p class="lead">
-      Selecciona un retrato para elegir tu personaje.
-    </p>
+<p class="lead">Selecciona un retrato para elegir tu personaje.</p>
 
-    <div class="grid" id="heroes">
+<div class="grid" id="heroes">
 
-      <button class="hero selected" type="button" data-name="David">
-        <img src="david.jpg" alt="Retrato de David">
-        <strong>David</strong>
-        <small>Pastor y rey</small>
-      </button>
+<button class="hero selected" type="button" data-name="David">
+<img src="david.jpg" alt="David">
+<strong>David</strong><small>Pastor y rey</small>
+</button>
 
-      <button class="hero" type="button" data-name="Moisés">
-        <img src="moises.jpg" alt="Retrato de Moisés">
-        <strong>Moisés</strong>
-        <small>Líder de Israel</small>
-      </button>
+<button class="hero" type="button" data-name="Moisés">
+<img src="moises.jpg" alt="Moisés">
+<strong>Moisés</strong><small>Líder de Israel</small>
+</button>
 
-      <button class="hero" type="button" data-name="Ester">
-        <img src="ester.jpg" alt="Retrato de Ester">
-        <strong>Ester</strong>
-        <small>Reina valiente</small>
-      </button>
+<button class="hero" type="button" data-name="Ester">
+<img src="ester.jpg" alt="Ester">
+<strong>Ester</strong><small>Reina valiente</small>
+</button>
 
-      <button class="hero" type="button" data-name="Elías">
-        <img src="elias.jpg" alt="Retrato de Elías">
-        <strong>Elías</strong>
-        <small>Profeta</small>
-      </button>
+<button class="hero" type="button" data-name="Elías">
+<img src="elias.jpg" alt="Elías">
+<strong>Elías</strong><small>Profeta</small>
+</button>
 
-      <button class="hero" type="button" data-name="María">
-        <img src="maria.jpg" alt="Retrato de María">
-        <strong>María</strong>
-        <small>Madre de Jesús</small>
-      </button>
+<button class="hero" type="button" data-name="María">
+<img src="maria.jpg" alt="María">
+<strong>María</strong><small>Madre de Jesús</small>
+</button>
 
-      <button class="hero" type="button" data-name="Pablo">
-        <img src="pablo.jpg" alt="Retrato de Pablo">
-        <strong>Pablo</strong>
-        <small>Apóstol</small>
-      </button>
+<button class="hero" type="button" data-name="Pablo">
+<img src="pablo.jpg" alt="Pablo">
+<strong>Pablo</strong><small>Apóstol</small>
+</button>
 
-      <button class="hero" type="button" data-name="Daniel">
-        <img src="daniel.jpg" alt="Retrato de Daniel">
-        <strong>Daniel</strong>
-        <small>Fiel y valiente</small>
-      </button>
+<button class="hero" type="button" data-name="Daniel">
+<img src="daniel.jpg" alt="Daniel">
+<strong>Daniel</strong><small>Fiel y valiente</small>
+</button>
 
-      <button class="hero" type="button" data-name="Débora">
-        <img src="debora.jpg" alt="Retrato de Débora">
-        <strong>Débora</strong>
-        <small>Jueza de Israel</small>
-      </button>
+<button class="hero" type="button" data-name="Débora">
+<img src="debora.jpg" alt="Débora">
+<strong>Débora</strong><small>Jueza de Israel</small>
+</button>
 
-    </div>
+</div>
 
-    <div class="message" id="chosen" aria-live="polite">
-      Héroe seleccionado: David
-    </div>
+<div class="message" id="chosen">
+Héroe seleccionado: David
+</div>
 
-    <button class="start" id="start" type="button">
-      ¡COMENZAR A JUGAR! 🚀
-    </button>
+<button class="start" id="start" type="button">
+¡COMENZAR A JUGAR! 🚀
+</button>
 
-    <div class="message" id="notice" aria-live="polite"></div>
+<div class="message" id="notice"></div>
 
-  </section>
+</section>
+
+<section id="setup" hidden>
+
+<h2>✦ PREPARA TU MISIÓN ✦</h2>
+
+<p>Tu héroe elegido:</p>
+<h3 id="heroName"></h3>
+
+<label for="nickname">Escribe tu apodo:</label>
+<input id="nickname" maxlength="18" placeholder="Tu nombre de jugador">
+
+<label for="category">Elige una categoría:</label>
+<select id="category">
+<option>Conocimiento general</option>
+<option>Personajes bíblicos</option>
+<option>Antiguo Testamento</option>
+<option>Nuevo Testamento</option>
+<option>La vida de Jesús</option>
+</select>
+
+<label for="difficulty">Elige la dificultad:</label>
+<select id="difficulty">
+<option>Fácil</option>
+<option>Intermedio</option>
+<option>Difícil</option>
+</select>
+
+<p>
+<button class="start" id="mission" type="button">
+¡CONFIRMAR MI MISIÓN! 🚀
+</button>
+</p>
+
+<p id="setupNotice" class="message"></p>
+
+</section>
+
+<section id="game" hidden>
+
+<h2>🌌 DESAFÍO BÍBLICO</h2>
+
+<p id="playerInfo"></p>
+<p id="questionNumber"></p>
+
+<h3 id="questionText"></h3>
+
+<div id="answers"></div>
+
+<p id="timer">⏱️ 20 segundos</p>
+<p id="score">⭐ Puntos: 0</p>
+<p id="feedback" class="message"></p>
+
+</section>
 
 </main>
 
 <footer>
-  DESAFÍO BÍBLICO GALÁCTICO · Aprende · Juega · Comparte
+DESAFÍO BÍBLICO GALÁCTICO · Aprende · Juega · Comparte
 </footer>
 
 <script>
 let selected = "David";
+let currentQuestion = 0;
+let score = 0;
+let seconds = 20;
+let timerInterval;
+let answerLocked = false;
+let playerNickname = "";
 
-const cards = [
-  ...document.querySelectorAll(".hero")
-];
+const cards = [...document.querySelectorAll(".hero")];
 
 cards.forEach(card => {
   card.addEventListener("click", () => {
-
-    cards.forEach(c => {
-      c.classList.remove("selected");
-    });
-
+    cards.forEach(c => c.classList.remove("selected"));
     card.classList.add("selected");
 
     selected = card.dataset.name;
@@ -340,131 +361,119 @@ cards.forEach(card => {
 document.getElementById("start").addEventListener("click", () => {
   document.getElementById("setup").hidden = false;
   document.getElementById("heroName").textContent = selected;
+
   document.getElementById("notice").textContent =
     "¡" + selected + " ha sido elegido!";
+
   document.getElementById("setup").scrollIntoView({
     behavior: "smooth"
   });
 });
 
-  const nickname = document.getElementById("nickname").value.trim();
-  const category = document.getElementById("category").value;
-  const difficulty = document.getElementById("difficulty").value;
-  const notice = document.getElementById("setupNotice");
-
-  if (nickname === "") {
-    notice.textContent = "¡Escribe tu apodo para continuar!";
-    return;
-  }
-
-  notice.textContent =
-    "¡Misión preparada, " + nickname + "! " +
-    "Héroe: " + selected + ". " +
-    "Categoría: " + category + ". " +
-    "Dificultad: " + difficulty + ".";
-});
 const questions = [
-  {
-    level: "Fácil",
-    question: "¿Quién construyó el arca?",
-    answers: ["Moisés", "Noé", "David", "Pablo"],
-    correct: 1,
-    explanation: "Noé construyó el arca siguiendo las instrucciones de Dios."
-  },
-  {
-    level: "Fácil",
-    question: "¿Quién venció a Goliat?",
-    answers: ["David", "Saúl", "Salomón", "Pedro"],
-    correct: 0,
-    explanation: "David venció a Goliat confiando en Dios."
-  },
-  {
-    level: "Fácil",
-    question: "¿Dónde nació Jesús?",
-    answers: ["Nazaret", "Jerusalén", "Belén", "Egipto"],
-    correct: 2,
-    explanation: "Jesús nació en Belén."
-  },
-  {
-    level: "Intermedio",
-    question: "¿Quién interpretó los sueños del faraón?",
-    answers: ["Daniel", "José", "Aarón", "Samuel"],
-    correct: 1,
-    explanation: "José interpretó los sueños del faraón en Egipto."
-  },
-  {
-    level: "Intermedio",
-    question: "¿Qué reina arriesgó su vida para ayudar a su pueblo?",
-    answers: ["Rut", "María", "Ester", "Débora"],
-    correct: 2,
-    explanation: "Ester intercedió por su pueblo ante el rey."
-  },
-  {
-    level: "Intermedio",
-    question: "¿Quién fue tragado por un gran pez?",
-    answers: ["Jonás", "Elías", "Isaías", "Pedro"],
-    correct: 0,
-    explanation: "Jonás estuvo dentro de un gran pez."
-  },
-  {
-    level: "Difícil",
-    question: "¿Quién fue el primer rey de Israel?",
-    answers: ["David", "Salomón", "Saúl", "Josías"],
-    correct: 2,
-    explanation: "Saúl fue el primer rey de Israel."
-  },
-  {
-    level: "Difícil",
-    question: "¿En qué isla recibió Juan la revelación del Apocalipsis?",
-    answers: ["Creta", "Patmos", "Chipre", "Malta"],
-    correct: 1,
-    explanation: "Juan recibió la revelación en la isla de Patmos."
-  },
-  {
-    level: "Difícil",
-    question: "¿Quién sucedió a Moisés como líder de Israel?",
-    answers: ["Caleb", "Aarón", "Josué", "Gedeón"],
-    correct: 2,
-    explanation: "Josué sucedió a Moisés."
-  },
-  {
-    level: "Difícil",
-    question: "¿Quién era la madre de Samuel?",
-    answers: ["Ana", "Sara", "Rebeca", "Raquel"],
-    correct: 0,
-    explanation: "Ana fue la madre de Samuel."
-  }
+{
+level:"Fácil",
+question:"¿Quién construyó el arca?",
+answers:["Moisés","Noé","David","Pablo"],
+correct:1,
+explanation:"Noé construyó el arca siguiendo las instrucciones de Dios."
+},
+{
+level:"Fácil",
+question:"¿Quién venció a Goliat?",
+answers:["David","Saúl","Salomón","Pedro"],
+correct:0,
+explanation:"David venció a Goliat confiando en Dios."
+},
+{
+level:"Fácil",
+question:"¿Dónde nació Jesús?",
+answers:["Nazaret","Jerusalén","Belén","Egipto"],
+correct:2,
+explanation:"Jesús nació en Belén."
+},
+{
+level:"Intermedio",
+question:"¿Quién interpretó los sueños del faraón?",
+answers:["Daniel","José","Aarón","Samuel"],
+correct:1,
+explanation:"José interpretó los sueños del faraón en Egipto."
+},
+{
+level:"Intermedio",
+question:"¿Qué reina ayudó a su pueblo?",
+answers:["Rut","María","Ester","Débora"],
+correct:2,
+explanation:"Ester intercedió por su pueblo ante el rey."
+},
+{
+level:"Intermedio",
+question:"¿Quién fue tragado por un gran pez?",
+answers:["Jonás","Elías","Isaías","Pedro"],
+correct:0,
+explanation:"Jonás estuvo dentro de un gran pez."
+},
+{
+level:"Difícil",
+question:"¿Quién fue el primer rey de Israel?",
+answers:["David","Salomón","Saúl","Josías"],
+correct:2,
+explanation:"Saúl fue el primer rey de Israel."
+},
+{
+level:"Difícil",
+question:"¿En qué isla recibió Juan la revelación del Apocalipsis?",
+answers:["Creta","Patmos","Chipre","Malta"],
+correct:1,
+explanation:"Juan recibió la revelación en la isla de Patmos."
+},
+{
+level:"Difícil",
+question:"¿Quién sucedió a Moisés como líder de Israel?",
+answers:["Caleb","Aarón","Josué","Gedeón"],
+correct:2,
+explanation:"Josué sucedió a Moisés."
+},
+{
+level:"Difícil",
+question:"¿Quién era la madre de Samuel?",
+answers:["Ana","Sara","Rebeca","Raquel"],
+correct:0,
+explanation:"Ana fue la madre de Samuel."
+}
 ];
-
-let currentQuestion = 0;
-let score = 0;
-let seconds = 20;
-let timerInterval;
 
 function startGame() {
   const level = document.getElementById("difficulty").value;
-  const selectedQuestions = questions.filter(q => q.level === level);
 
-  if (selectedQuestions.length === 0) return;
+  window.gameQuestions = questions.filter(q => q.level === level);
 
-  window.gameQuestions = selectedQuestions;
   currentQuestion = 0;
   score = 0;
 
   document.getElementById("setup").hidden = true;
   document.getElementById("game").hidden = false;
 
+  document.getElementById("playerInfo").textContent =
+    playerNickname + " · Héroe: " + selected;
+
   showQuestion();
+
+  document.getElementById("game").scrollIntoView({
+    behavior: "smooth"
+  });
 }
 
 function showQuestion() {
   clearInterval(timerInterval);
+  answerLocked = false;
 
   const q = window.gameQuestions[currentQuestion];
   seconds = 20;
 
   document.getElementById("questionNumber").textContent =
-    "Pregunta " + (currentQuestion + 1) + " de " + window.gameQuestions.length;
+    "Pregunta " + (currentQuestion + 1) +
+    " de " + window.gameQuestions.length;
 
   document.getElementById("questionText").textContent = q.question;
   document.getElementById("score").textContent = "⭐ Puntos: " + score;
@@ -477,9 +486,6 @@ function showQuestion() {
     const button = document.createElement("button");
     button.textContent = answer;
     button.className = "start";
-    button.style.display = "block";
-    button.style.width = "100%";
-    button.style.margin = "10px 0";
     button.onclick = () => checkAnswer(index);
     answers.appendChild(button);
   });
@@ -503,25 +509,33 @@ function updateTimer() {
 }
 
 function checkAnswer(index) {
+  if (answerLocked) return;
+
+  answerLocked = true;
   clearInterval(timerInterval);
 
   const q = window.gameQuestions[currentQuestion];
-  const buttons = document.querySelectorAll("#answers button");
 
-  buttons.forEach(button => button.disabled = true);
+  document.querySelectorAll("#answers button").forEach(button => {
+    button.disabled = true;
+  });
 
   if (index === q.correct) {
-    score += seconds * 10;
+    const earned = seconds * 10;
+    score += earned;
+
     document.getElementById("feedback").textContent =
-      "✨ ¡CORRECTO! + " + (seconds * 10) + " puntos. " + q.explanation;
+      "✨ ¡CORRECTO! +" + earned + " puntos. " + q.explanation;
   } else {
     document.getElementById("feedback").textContent =
-      "💫 " + (index === -1 ? "¡Se acabó el tiempo!" : "¡Inténtalo en la próxima!") +
+      "💫 " +
+      (index === -1 ? "¡Se acabó el tiempo!" : "¡Inténtalo en la próxima!") +
       " La respuesta correcta era: " + q.answers[q.correct] +
       ". " + q.explanation;
   }
 
-  document.getElementById("score").textContent = "⭐ Puntos: " + score;
+  document.getElementById("score").textContent =
+    "⭐ Puntos: " + score;
 
   setTimeout(() => {
     currentQuestion++;
@@ -535,73 +549,30 @@ function checkAnswer(index) {
 }
 
 function finishGame() {
+  clearInterval(timerInterval);
+
   document.getElementById("game").innerHTML =
     "<h2>🏆 ¡MISIÓN COMPLETADA!</h2>" +
+    "<p>¡Buen trabajo, " + playerNickname + "!</p>" +
     "<p>Tu puntuación final:</p>" +
     "<h1>" + score + " puntos</h1>" +
-    "<button class='start' onclick='location.reload()'>VOLVER A JUGAR</button>";
+    "<button class='start' onclick='location.reload()'>" +
+    "VOLVER A JUGAR</button>";
 }
 
 document.getElementById("mission").addEventListener("click", () => {
-  const nickname = document.getElementById("nickname").value.trim();
+  playerNickname = document.getElementById("nickname").value.trim();
 
-  if (!nickname) {
+  if (!playerNickname) {
     document.getElementById("setupNotice").textContent =
-      "Escribe tu apodo para continuar.";
+      "¡Escribe tu apodo para continuar!";
     return;
   }
 
+  document.getElementById("setupNotice").textContent = "";
   startGame();
 });
 </script>
 
 </body>
 </html>
-
-<div class="message" id="notice" aria-live="polite"></div>
-<div id="setup" hidden>
-  <h2>✦ PREPARA TU MISIÓN ✦</h2>
-
-  <p>Tu héroe elegido:</p>
-  <h3 id="heroName"></h3>
-
-  <label for="nickname">Escribe tu apodo:</label>
-  <input id="nickname" type="text" maxlength="18"
-         placeholder="Tu nombre de jugador">
-
-  <label for="category">Elige una categoría:</label>
-  <select id="category">
-    <option>Conocimiento general</option>
-    <option>Personajes bíblicos</option>
-    <option>Antiguo Testamento</option>
-    <option>Nuevo Testamento</option>
-    <option>La vida de Jesús</option>
-  </select>
-
-  <label for="difficulty">Elige la dificultad:</label>
-  <select id="difficulty">
-    <option>Fácil</option>
-    <option>Intermedio</option>
-    <option>Difícil</option>
-  </select>
-
-  <button class="start" id="mission" type="button">
-    ¡CONFIRMAR MI MISIÓN! 🚀
-  </button>
-
-  <p id="setupNotice" class="message"></p>
-</div>
-<div id="game" hidden>
-  <h2>🌌 DESAFÍO BÍBLICO</h2>
-
-  <p id="questionNumber">Pregunta 1 de 10</p>
-  <h3 id="questionText">Aquí aparecerá la pregunta</h3>
-
-  <div id="answers"></div>
-
-  <p id="timer">⏱️ 20 segundos</p>
-  <p id="score">⭐ Puntos: 0</p>
-
-  <p id="feedback" class="message"></p>
-</div>
-</section>
